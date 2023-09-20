@@ -1,0 +1,183 @@
+<b> Element
+<strong> Element(for SEO)
+<i> Element
+<em> Element(for SEO)
+<small> Element
+<sup> Element
+<sUb> Element
+<mark> Element
+<ins> Element
+<del> Element
+
+
+DESCRITION LIST
+-----------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The dl, dd, and dt elements</h1>
+
+<p>These three elements are used to create a description list:</p>
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+
+</body>
+</html>
+----------------
+
+
+TABLE
+
+-------------------
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+
+<h2>Set the first column to 70% of the table width</h2>
+
+<table style="width:100%">
+  <tr>
+    <th style="width:70%">Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+</body>
+</html>
+--------------------
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+
+<h2>Set the height of the second row to 200 pixels</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr style="height:200px">
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+---------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>Right-align content in tbody</h1>
+
+<table style="width:100%">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody style="text-align:right">
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
+
+--------------------
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>Vertical-align content in tbody</h1>
+
+<table style="width:50%;">
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  <tbody style="vertical-align:bottom">
+    <tr style="height:100px">
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr style="height:100px">
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>  
+</table>
+
+</body>
+</html>
+-----------------------------------
