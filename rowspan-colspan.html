@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 3px solid darkgray;
+  /* border-collapse: collapse; */
+ 
+}
+</style>
+</head>
+<body>
+
+<h2>Cell that spans two rows</h2>
+<p>To make a cell span more than one row, use the rowspan attribute.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <td>Jill</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Phone</th>
+    <td>555-1234</td>
+  </tr>
+  <tr>
+    <td>555-8745</td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+<h2>Cell that spans two columns</h2>
+<p>To make a cell span more than one column, use the colspan attribute.</p>
+
+<table style="width:100%">
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+  </tr>
+</table>
+<br><br><br>
+
+<table style="width: 100%;  text-align: center;">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>GRADE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ali</td>
+            <td>Veli</td>
+            <td rowspan="2">100</td>
+        </tr>
+        <tr>
+            <td>Ayse</td>
+            <td>Guzel</td>
+            <!-- <td>100</td> -->
+        </tr>
+    </tbody>
+</table>
+----------------------- -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  /* border-collapse: collapse; */
+  width: 100%;
+  border: 5px solid darkgray;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+/* tr {
+    border: 1px solid black;
+} */
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+        </tr>
+        <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+        </tr>
+        <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+        </tr>
+        <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+        </tr>
+        <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+        </tr>
+      </table>
