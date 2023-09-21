@@ -1,0 +1,243 @@
+Buradan kopyaladığınız codeları VsCode da yapıştırdıktan sonra 
+SHIFT + ALT + F 
+yaparsanız sayfanız daha anlaşılır görünür
+denemesi bedava :)))
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.one {
+  border-style: solid;
+  border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+}
+</style>
+</head>
+<body>
+
+<h2>The border-color Property</h2>
+<p>The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border):</p>
+
+<p class="one">A solid multicolor border</p>
+
+</body>
+</html>
+
+-------------------
+BORDER STYLE
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*BORDER-RADIUS da verilebilir UNUTMAYALIM */
+body {
+  text-align: center;
+}
+/* Four values */
+p.four {
+  border-style: dotted solid double dashed;
+}
+
+/* Three values */
+p.three {
+  border-style: dotted solid double;
+}
+
+/* Two values */
+p.two {
+  border-style: dotted solid;
+}
+
+/* One value */
+p.one {
+  border-style: dotted;
+}
+</style>
+</head>
+<body>
+
+<h2>Individual Border Sides</h2>
+<p class="four">4 different border styles.</p>
+<p class="three">3 different border styles.</p>
+<p class="two">2 different border styles.</p>
+<p class="one">1 border style.</p>
+
+</body>
+</html>
+
+--------------------------
+
+MARGIN
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 1px solid black;
+  margin: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<h2>The margin shorthand property - 4 values</h2>
+
+<div>This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px.</div>
+
+<hr>
+
+</body>
+</html>
+
+----------------------
+
+MARGIN-AUTO
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+}
+</style>
+</head>
+<body>
+
+<h2>Use of margin: auto</h2>
+<p>You can set the margin property to auto to horizontally center the element within its container. The element will then take up the specified width, and the remaining space will be split equally between the left and right margins:</p>
+
+<div>
+This div will be horizontally centered because it has margin: auto;
+</div>
+
+</body>
+</html>
+
+-------------------------
+
+PADDING
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 1px solid black;
+  padding: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<h2>The padding shorthand property - 4 values</h2>
+
+<div>This div element has a top padding of 25px, a right padding of 50px, a bottom padding of 75px, and a left padding of 100px.</div>
+
+</body>
+</html>
+
+---------------------------
+PADDING WITH element
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.ex1 {
+  width: 300px;
+  background-color: yellow;
+}
+
+div.ex2 {
+  width: 300px;
+  padding: 25px;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<h2>Padding and element width</h2>
+
+<div class="ex1">This div is 300px wide.</div>
+<br>
+
+<div class="ex2">The width of this div is 350px, even though it is defined as 300px in the CSS.</div>
+
+</body>
+</html>
+
+------------------------
+
+WIDTH-HEIGHT , MAX-WIDTH
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  max-width: 500px;
+  height: 100px;
+  background-color: powderblue;
+}
+</style>
+</head>
+<body>
+
+<h2>Set the max-width of an element</h2>
+
+<div>This div element has a height of 100px and a max-width of 500px.</div>
+
+<p>Resize the browser window to see the effect.</p>
+
+</body>
+</html>
+
+
+Notes :
+The max-width property is used to set the maximum width of an element.
+
+The max-width can be specified in length values, like px, cm, etc., or in percent (%) of the containing block, or set to none (this is default. Means that there is no maximum width).
+
+The problem with the <div> above occurs when the browser window is smaller than the width of the element (500px). The browser then adds a horizontal scrollbar to the page.
+
+Using max-width instead, in this situation, will improve the browser's handling of small windows.
+
+Tip: Drag the browser window to smaller than 500px wide, to see the difference between the two divs!
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  /*max-width: 100px;*/
+  width: 200px;
+  height: 100px;
+  background-color: powderblue;
+  padding: 50px;
+  border: 3px solid blueviolet;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Set the max-width of an element</h2>
+
+<div>This div element has a height of 100px and a max-width of 500px.</div>
+
+<p>Resize the browser window to see the effect.</p>
+
+</body>
+</html>
+
