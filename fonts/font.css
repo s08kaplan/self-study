@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Croissant+One&family=Dancing+Script:wght@700&family=Kenia&family=Lobster&family=Mooli&display=swap');
+
+h1 {
+   text-align: center;
+   color: blueviolet;
+}
+
+.p1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 100;
+    font-variant: small-caps;
+    font-family: 'Croissant One', cursive;
+    color: yellowgreen;
+}
+
+.p2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    font-family: 'Lobster', cursive;
+    color: coral;
+}
+
+.p3 {
+    font-family: 'Kenia', cursive;
+}
+
+.p4 {
+    font-family: hola;
+    font-size: 100px;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "hola";
+    src: url(./font-family/ArianaVioleta-dz2K.ttf);
+}

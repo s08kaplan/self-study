@@ -1,4 +1,6 @@
 p.one {
     border-style: solid;
-    border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+    border-color: #ff0000 green blue yellow; /* red top, green right, blue bottom and yellow left */
   }
+
+ 

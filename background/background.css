@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(60deg, #4158D0 0%, #C850C0aa 46%, #FFCC70aa 100%),url(./img/resim-2.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
