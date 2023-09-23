@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: linear-gradient(60deg, #4158D0 0%, #C850C0aa 46%, #FFCC70aa 100%),url(./img/resim-2.jpg);
+    background-image: linear-gradient(40deg, #4158D0 0%, #C850C0aa 46%, #FFCC70aa 100%),url(./img/owl-50267_640.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,6 +12,23 @@ body {
     background-position: left;
 }
 
+#i1 {
+    /* width ve height değerlerini değiştiriniz lütfen */
+    background-image: url(./img/lion-3012515_640.jpg);
+    /* border: 3px solid red; */
+    /* width: 50%;     
+    /* height: 50%; */
+    height: 50vh;
+    /* height: 100vh; */
+    background-position: top right;
+    margin-top: 80px;
+    background-repeat: repeat-y;
+}
+
+#i2 {
+    margin-top: 50px;
+    
+}
 
 
 

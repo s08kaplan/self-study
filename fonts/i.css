@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Croissant+One&family=Dancing+Script:wght@700&family=Fuggles&family=Kenia&family=Lobster&family=Mooli&family=Roboto:ital@1&display=swap');
+
+
+p {
+    font-family: python;
+    font-size: 100px;
+    
+}
+
+@font-face {
+    font-family: python;
+    src: url(./font-family/ArianaVioleta-dz2K.ttf);
+}

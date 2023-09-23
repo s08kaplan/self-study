@@ -1,0 +1,8 @@
+To repeat an image horizontally, set background-repeat: repeat-x;
+ 
+To repeat an image vertically, set background-repeat: repeat-y;
+
+Showing the background image only once is also specified by the background-repeat: no-repeat property
+
+
+The background-position property is used to specify the position of the background image.
