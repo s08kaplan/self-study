@@ -4,25 +4,35 @@
 }
 
 body {
-    background-image: linear-gradient(40deg, #4158D0 0%, #C850C0aa 46%, #FFCC70aa 100%),url(./img/owl-50267_640.jpg);
+    background-image: linear-gradient(60deg, rgba(54, 148, 20, 0.711) 0%, #C850C0aa 46%, #FFCC70aa 100%),url(./img/owl-50267_640.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    background-position: left;
+    background-size:cover;
+    background-position: center center;
+}
+
+.a1 {
+    /* border: 2px solid red; */
+    /* padding: 100px; */
 }
 
 #i1 {
     /* width ve height değerlerini değiştiriniz lütfen */
     background-image: url(./img/lion-3012515_640.jpg);
     /* border: 3px solid red; */
-    /* width: 50%;     
+     /* width: 500px;       */
     /* height: 50%; */
-    height: 50vh;
-    /* height: 100vh; */
+    /* height: 50vh; */
+    height: 100vh;
     background-position: top right;
-    margin-top: 80px;
-    background-repeat: repeat-y;
+    /* margin-top: 80px; */
+    /* margin-right: 50px; */
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    
+    
+    background-repeat: no-repeat;
 }
 
 #i2 {
