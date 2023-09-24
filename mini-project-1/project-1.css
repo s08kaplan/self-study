@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./img/istockphoto-956043950-612x612.jpg);
+  background-size: cover;
+}
+
+/* ---------NAV-------------- */
+
+nav {
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 20px 80px;
+  padding: 10px;
+  color: blueviolet;
+  display: inline-block;
+}
+
+.logo span {
+  color: coral;
+  font-size: 23px;
+  font-family: "Caveat", cursive;
+}
+
+.main-menu {
+  /* display: inline-block; */
+  margin: 20px 80px;
+  float: right;
+}
+
+.nav-menu li {
+  font-family: "Croissant One", cursive;
+  color: purple;
+  margin-right: 80px;
+  padding: 10px;
+  list-style-type: none;
+  display: inline-block;
+  /* text-align: center; */
+  transition: 0.5s;
+}
+
+.nav-menu li:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: coral;
+  border-radius: 10px;
+  text-decoration: underline;
+  /* transition: 3s; */
+}
+
+/* ------------MAIN------------ */
+
+h1 {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  color: orchid;
+}
+
+.daily {
+  text-align: center;
+}
+
+.meat {
+  width: 400px;
+}
+
+.preparation {
+  display: inline-block;
+  text-align: left;
+  column-count: 3;
+  /* column-rule-style: dotted; */
+  /* padding: 80px; */
+  width: 50%;
+  margin-left: 50px;
+  font-family: "Permanent Marker", cursive;
+  color: rgba(109, 20, 76, 0.867);
+}
+
+/* -----VIDEO RECIPE SECTION---------- */
+
+.video {
+  margin-top: 20px;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(15, 44, 66);
+}
+
+.explain {
+  overflow: auto;
+}
+
+.explain p {
+  float: right;
+  width: 65%;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: rgba(59, 9, 59, 0.826);
+  line-height: 2;
+  text-align: left;
+  column-count: 4;
+}
+
+
+.explain iframe {
+  margin: 5px;
+  width: 500px;
+}
+
+/* -------FORM-------- */
+
