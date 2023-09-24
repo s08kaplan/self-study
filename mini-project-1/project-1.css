@@ -5,6 +5,7 @@
 }
 
 body {
+  border: 1px;
   background-image: url(./img/istockphoto-956043950-612x612.jpg);
   background-size: cover;
 }
@@ -82,6 +83,11 @@ h1 {
   color: rgba(109, 20, 76, 0.867);
 }
 
+.preparation::first-letter {
+  font-size: 25px;
+  color: red;
+}
+
 /* -----VIDEO RECIPE SECTION---------- */
 
 .video {
@@ -93,6 +99,7 @@ h2 {
   text-align: center;
   font-family: "Permanent Marker", cursive;
   color: rgb(15, 44, 66);
+  margin-top: 20px;
 }
 
 .explain {
@@ -109,7 +116,6 @@ h2 {
   column-count: 4;
 }
 
-
 .explain iframe {
   margin: 5px;
   width: 500px;
@@ -117,3 +123,133 @@ h2 {
 
 /* -------FORM-------- */
 
+.opinion {
+  /* margin: 5px; */
+  padding: 10px;
+}
+
+.form {
+  font-family: "Permanent Marker", cursive;
+  color: blueviolet;
+}
+
+.form input {
+  background-color: coral;
+  color: white;
+  display: inline-block;
+}
+
+.form-name {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.form-email {
+  margin: 5px 15px;
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  margin-top: 10px;
+  margin-right: 200px;
+  background-color: rgb(104, 138, 163);
+  color: lightsalmon;
+  transition: 0.5s;
+}
+
+button:hover {
+  color: black;
+  background-color: orchid;
+  transform: scale(1.1);
+}
+
+.write {
+  margin: 2px 40px;
+  padding: 10px;
+  /* display: inline-block; */
+  float: left;
+}
+
+iframe {
+  width: 500px;
+  margin-left: 30%;
+}
+
+/* ---------FOOTER---------- */
+
+footer {
+  display: inline-block;
+}
+
+/* .footer-mail {
+    display: inline-block;
+}
+
+.footer-tel {
+    display: inline-block;
+} */
+
+.footer-mail a {
+  font-family: "Caveat", cursive;
+  font-size: 30px;
+  color: rgb(132, 11, 60);
+  margin: 30px 50px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.footer-mail a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.footer-tel a {
+  font-family: "Caveat", cursive;
+  font-size: 30px;
+  margin: 50px;
+  text-decoration: none;
+  color: rgb(84, 22, 142);
+  transition: 0.5s;
+}
+
+.footer-tel a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.footer-icons {
+  float: right;
+  margin-right: 50px;
+}
+
+.footer-icons a:hover {
+  color: aqua;
+}
+
+.fa-whatsapp {
+  font-size: 50px;
+  margin-right: 100px;
+}
+
+.fa-facebook {
+  font-size: 50px;
+  margin-right: 100px;
+}
+
+.fa-telegram {
+  font-size: 50px;
+  margin-right: 100px;
+}
+
+.fa-instagram {
+  font-size: 50px;
+  margin-right: 100px;
+}
