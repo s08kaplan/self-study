@@ -11,7 +11,7 @@ or 'It\'s alright'
 
 or 
 
-let answer5 = `He is called "Johnny"`
+let answer5 = `He's called "Johnny"`
 
 
 let myText = "Hello \
@@ -96,7 +96,8 @@ let newText3 = text3.replace(/Microsoft/g,"W3Schools");
 console.log(newText3);
 
 
-JavaScript String ReplaceAll() 
+JavaScript String ReplaceAll()
+--------------------------------- 
 The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
 
 If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown. 
@@ -225,9 +226,6 @@ It is read only. str[0] = "A" gives no error (but does not work!)
 If you want to work with a string as an array, you can convert it to an array.
 
 JavaScript String split()
----------------------------
-
-
 A string can be converted to an array with the split() method:
 
 Example

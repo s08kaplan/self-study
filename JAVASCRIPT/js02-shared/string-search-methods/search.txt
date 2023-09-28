@@ -1,0 +1,121 @@
+INDEXOF()
+-------------------------------
+The indexOf() method returns the index (position) the first occurrence of a string in a string:
+
+let myText = "Please locate where 'locate' occurs!";
+
+let result = myText.indexOf("locate");
+
+--------------------------------------------
+
+
+LASTINDEXOF()
+----------------------------------
+
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+let myText = "Please locate where 'locate' occurs!";
+
+let result = myText.lastIndexOf("locate");
+
+NOTE: Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+
+let myText = "Please locate where 'locate' occurs!";
+
+let result = myText.lastIndexOf("HEEEEY");
+
+
+NOTE : Both methods accept a second parameter as the starting position for the search:
+
+let myText = "Please locate where 'locate' occurs!";
+let result = myText.lastIndexOf("locate", 14);
+result = myText.lastIndexOf("locate", 14);
+
+(NOTE: Remember that the lastIndexOf() method searches backwards, 
+so position 15 means start the search at position 15, 
+and search to the beginning.)
+
+-------------------------------------
+
+ SEARCH()
+ ------------
+The search() method searches a string for a string 
+(or a regular expression) and returns the position of the match:
+
+let myText = "Please locate where 'locate' occurs!";
+let result = myText.search("locate");
+let result = myText.search(/locate/);
+
+DIFFERENCE between SEARCH and INDEXOF methods is:
+INDEXOF method takes a second parameter(optional) but
+SEARCH method canNOT 
+
+-------------------------------------------
+
+MATCH()
+---------------------
+
+The match() method returns an array containing the results of matching 
+a string against a string (or a regular expression)
+
+
+let matchText = "The rain in SPAIN stays mainly in the plain";
+let result = matchText.match("ain")
+
+(NOTE: match() will return only the first match in the string.)
+
+------------------------------------------
+INCLUDES()
+---------------
+
+
+The includes() method returns true if a string contains a specified value.
+
+Otherwise it returns false.
+
+let text = "Hello world, welcome to the universe.";
+text = text.includes("world")
+
+(NOTE: includes() can take a second value to search the given word or item)
+
+let text = "Hello world, welcome to the universe.";
+text = text.includes("world",6)
+--------------------------------------
+
+STARTSWITH()
+--------------------------------
+
+The startsWith() method returns true if a string begins with a specified value.
+
+Otherwise it returns false:
+
+let text = "Hello world, welcome to the universe.";
+text = text.startsWith("Hello");
+
+(NOTE: STARTSWITH() CAN TAKE A SECOND PARAMETER TO START )
+
+let text = "Hello world, welcome to the universe.";
+text = text.startsWith("world",6);
+
+
+-------------------------------------------
+
+ENDSWITH()
+--------------------
+
+The endsWith() method returns true if a string ends with a specified value.
+
+Otherwise it returns false:
+
+
+let text = "Hello world, welcome to the universe.";
+text = text.endsWith("world");
+
+(NOTE: IT CAN TAKE A SECOND PARAMETER TO BEGIN )
+
+let text = "Hello world, welcome to the universe.";
+text = text.endsWith("world",11);
+
+
+
+

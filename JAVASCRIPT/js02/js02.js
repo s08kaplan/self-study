@@ -23,3 +23,7 @@
 // NOTE : "" işaretleri de birer karakter olarak sayılıyor
 // ---------------------------------------------------------------
 
+
+let text = "Hello world, welcome to the universe.";
+text = text.startsWith("hello");
+console.log(text);
