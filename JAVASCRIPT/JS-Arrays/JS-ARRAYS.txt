@@ -1,0 +1,62 @@
+
+ARRAYS
+----------
+
+An array is a special variable, which can hold more than one value:
+
+(NOTE: It is a common practice to declare arrays with the const keyword.)
+
+const cars = ["Saab", "Volvo", "BMW"];
+
+const students = ["ali", "veli",true,false,1,15,23,"hey"]
+
+students array can be written like this:
+
+const students = [
+    "ali", 
+    "veli",
+     true,
+     false, 
+     1,
+     15,
+     23,
+     "hey"
+];
+
+we can modify also:
+
+students[0] = "jenny";
+students[1] = "danny";
+students[8] = "jimmy";
+
+---------------------------
+
+we can also create an array by using keyword : NEW
+
+const cars = new Array("sahin","dogan","serce")
+
+--------------
+toSTRING() Method
+------------------
+The toString() method returns an array as a comma separated string:
+
+(NOTE: but TYPE NOT CHANGED)
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.toString());
+console.log(typeof fruits);
+
+NESTED ARRAYS
+---------------
+
+const myArray = [
+    "ali",
+    1,
+    true,
+    ["hasan","school"],
+    56,
+    [["hey","pay","attention","please",[0]]]
+]
+
+
+
