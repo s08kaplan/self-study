@@ -99,6 +99,8 @@
 // let result;
 
 // if (symbol == "+") {
+//     x = parseInt(x);
+//     y = parseInt(y);
 //     result = x + y;
 // }else if (symbol == "-") {
 //     result = x - y;
@@ -157,9 +159,100 @@
 // if (note < 40){
 //     result = "you failed";
 // }else if(note >=40 && note<= 50) {
-//     result = " your pass is on a condition 'it depends on your theacher:)))'"
+//     result = " your pass is on a condition 'it depends on your teacher:)))'"
 // }else {
 //     result = "you passed"
 // }
 
 // console.log(result);
+
+
+
+
+
+// let wage = prompt("enter your wage : ");
+// wage = parseInt(wage);
+// const amount = 11400;
+
+// let result = (wage < amount)?(wage+wage*1.5):(wage+wage*1.1);
+
+// console.log(result);
+
+
+
+// const budget = parseInt(prompt("enter your wage : "));
+// const expense = parseInt(prompt("enter your expenses : "));
+// const amount = 11400;
+// result = (budget >= expense + 11400)?"you may have credit":"sorry we can't give you credit";
+// console.log(result);
+
+
+
+// const grade = parseInt(prompt("enter your grade : "));
+// let result;
+// if (grade < 0 || grade > 100) {
+//         result = "enter a valid grade";
+// }else if (0 <= grade && grade <= 25) {
+//     result = "FF";
+// }else if (26<= grade && grade <= 45) {
+//     result = "DD";
+// }else if (46 <= grade && grade <= 65) {
+//     result = "CC";
+// }else if (66 <= grade && grade <= 75) {
+//     result = "BB";
+// }else if ( 76 <= grade && grade <= 90) {
+//     result = "BA";
+// }else if (91 <= grade && grade <= 100) {
+//     result = "AA"
+// }
+
+// console.log(result);
+
+
+
+
+
+// const x = parseInt(prompt("enter a number : "));
+// const y = parseInt(prompt("enter a number : "));
+// const z = parseInt(prompt("enter a number : "));
+// let result;
+// if ( x < y && y < z) {
+//        result = `the smallest number is : ${x} and the sum of the numbers is : ${x + y + z}
+//        and the product of the numbers is : ${x * y * z}`
+//     }else if (y < x && x < z) {
+//         result = `the smallest number is : ${y} and the sum of the numbers is : ${x + y + z}
+//         and the product of the numbers is : ${x * y * z}`
+//     }else {
+//         result = `the smallest number is : ${z} and the sum of the numbers is : ${x + y + z}
+//         and the product of the numbers is : ${x * y * z}`
+//     }
+//     console.log(result);
+
+
+// const x = parseInt(prompt("enter a number : "));
+// const y = parseInt(prompt("enter a number : "));
+// const z = parseInt(prompt("enter a number : "));
+// let result;
+// const sum = (x + y + z);
+// const product = (x * y * z);
+// if ( x < y && y < z) {
+//        result = `the smallest number is : ${x}`
+//     }else if (y < x && x < z) {
+//         result = `the smallest number is : ${y} `
+//     }else {
+//         result = `the smallest number is : ${z} `
+//     }
+//     console.log(result,sum, product);
+
+// const yourNumber = parseInt(prompt("enter a number : "));
+// const message = (yourNumber%2==0)?"the given number is an even number":"the given number is an odd number "
+// console.log(message);
+
+// alert("if you wanna convert Celsius to fahrenheit,use the first converter");
+// let celsiusToFahrenheit = parseInt(prompt("enter your celsius value :"));
+// celsiusToFahrenheit = celsiusToFahrenheit * 9/5 + 32;
+// console.log(celsiusToFahrenheit );
+
+// let fahrenheitToCElsius = parseInt(prompt("enter your fahrenheit value :"));
+// fahrenheitToCElsius = (fahrenheitToCElsius - 32) * 5/9
+// console.log(fahrenheitToCElsius);
