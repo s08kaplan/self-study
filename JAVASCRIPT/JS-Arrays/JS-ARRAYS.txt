@@ -6,6 +6,14 @@ An array is a special variable, which can hold more than one value:
 
 (NOTE: It is a common practice to declare arrays with the const keyword.)
 
+
+we can also create an array by using keyword : NEW
+
+const cars = new Array("sahin","dogan","serce")
+console.log(cars)
+(but don't use new keyword for BEST-PRACTICE)
+
+
 const cars = ["Saab", "Volvo", "BMW"];
 
 const students = ["ali", "veli",true,false,1,15,23,"hey"]
@@ -29,22 +37,21 @@ students[0] = "jenny";
 students[1] = "danny";
 students[8] = "jimmy";
 
+const cars = ["Saab", "Volvo", "BMW","Mercedes","Audi","Saab"];
+ console.log(cars[0]);
+ console.log(cars[1]);
+ console.log(cars[2]);
+ const cars2 = new Array("Saab", "Volvo", "BMW");
+ console.log(cars2.length);
+ cars2[0] = "Opel";
+ console.log(cars2);
+ console.log(cars2.toString());
+ const person = {firstName:"John", lastName:"Doe", age:46};
+ console.log(person.firstName);
+ console.log(person["firstName"]);
+
+ (for BEST-PRACTICE use INDEX NUMBERS to see the elements)
 ---------------------------
-
-we can also create an array by using keyword : NEW
-
-const cars = new Array("sahin","dogan","serce")
-
---------------
-toSTRING() Method
-------------------
-The toString() method returns an array as a comma separated string:
-
-(NOTE: but TYPE NOT CHANGED)
-
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits.toString());
-console.log(typeof fruits);
 
 NESTED ARRAYS
 ---------------
@@ -57,6 +64,68 @@ const myArray = [
     56,
     [["hey","pay","attention","please",[0]]]
 ]
+ 
 
 
 
+--------------
+toSTRING() - JOIN() Method
+------------------
+The toString() method returns an array as a comma separated string:
+
+(NOTE: but TYPE NOT CHANGED)
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.toString());
+console.log(typeof fruits);
+
+
+The join() method also joins all array elements into a string.
+It behaves just like toString(), but in addition you can specify the separator:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+console.log(fruits.toString);
+console.log(fruits.join("*"));
+
+POP-PUSH-SHIFT-UNSHIFT
+------------------------
+
+Pop()======>The pop() method removes the last element from an array
+
+Push()=====>The push() method adds a new element to an array (at the end)
+
+Shift()=====>The shift() method removes the first array element
+
+Unshift()====>The unshift() method adds a new element to an array (at the beginning)
+
+Also delete operator can be used BUT
+Warning !
+
+Using delete leaves undefined holes in the array.
+
+Use pop() or shift() instead.
+console.log(fruits);
+console.log(fruits.pop());
+console.log(fruits);
+console.log(fruits.push("kiwi"));
+console.log(fruits);
+console.log(fruits.shift());
+console.log(fruits);
+console.log(fruits.unshift("watermelon"));
+console.log(fruits);
+console.log(delete fruits[2]);
+console.log(fruits);
+
+
+
+Merging (Concatenating) Arrays
+The concat() method creates a new array by merging (concatenating) existing arrays:
+
+(The concat() method does not change the existing arrays. It always returns a new array.)
+
+const cars = ["sahin","dogan","serce"]
+const cars2 = const cars = ["Saab", "Volvo", "BMW","Mercedes","Audi","Saab"]
+
+const myCars = cars.concat(cars2)
+console.log(myCars)

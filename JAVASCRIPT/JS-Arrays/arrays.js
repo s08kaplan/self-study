@@ -28,13 +28,24 @@
 // console.log(fruits.toString());
 // console.log(typeof fruits);
 
-const myArray = [
-    "ali",
-    1,
-    true,
-    ["hasan","school"],
-    56,
-    [["hey","pay","attention","please",[0]]]
-]
+// const myArray = [
+//     "ali",
+//     1,
+//     true,
+//     ["hasan","school"],
+//     56,
+//     [["hey","pay","attention","please",[0]]]
+// ]
 
-console.log(myArray[3][1]);
+// console.log(myArray[3][1]);
+
+
+
+
+// const cars = ["sahin","dogan","serce"];
+// const cars2 = ["Saab", "Volvo", "BMW","Mercedes","Audi","Saab"]
+
+// const myCars = cars.concat(cars2)
+// console.log(myCars)
+
+// const myFavorite = cars2.concat(cars)
