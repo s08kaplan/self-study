@@ -340,3 +340,82 @@
 // }
    
 // console.log(message);
+
+
+
+
+
+
+
+// const x = Number(prompt("enter a number:"))
+// const y = Number(prompt("enter a number:"))
+// let message = "";
+// if (x > y) {
+//   if (x > 0) {
+//     message =("x is greater than y and positive.");
+//   } else {
+//     message = ("x is greater than y but not positive.");
+//   }
+// } else {
+//   message = ("x is not greater than y.");
+// }
+// console.log(message);
+
+
+
+
+
+
+
+
+// const x = Number(prompt("enter a number:"))
+// const y = Number(prompt("enter a number:"))
+// let message = "";
+// if (x > y) {
+//   if (x > 0 && y>0) {
+//     message =(`x is greater than y and positive: ${x},
+//     y is positive: ${y}`);
+//   } else if (x > 0 && y < 0) {
+//     message =(`x is greater than y and positive: ${x},
+//     y is negative: ${y}`);
+//   }else if(x > 0 && y == 0){
+//     message =(`x is greater than y and positive: ${x},
+//     y is 0`);
+//   } else {
+//     message = (`x is greater than y but not positive,  x: ${x} and y: ${y}.`);
+//   }
+// } else {
+//   message = (`x is not greater than y, x:  ${x} and y: ${y}.`);
+// }
+
+// console.log(message);
+
+
+
+
+
+
+
+// for (let i = 0; i < 10; i++) {
+//     if (i === 5){
+//         continue;
+//     }console.log(i)
+// }
+
+
+while (let i = 0; i < 10; i++) {
+    if (i === 5){
+        continue;
+    }console.log(i)
+}
+
+let x = 5
+let message ="şart oluşmadı ama do while çalıştı"
+
+do {
+    console.log(message);
+}
+while (x < 5){
+    console.log(message);
+}
+
