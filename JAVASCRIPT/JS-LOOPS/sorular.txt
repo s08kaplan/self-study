@@ -1,0 +1,10 @@
+Kullanıcıdan alinan sayi eger cift ise iki katını;tek ise karesini konsolda yazdirin (if-else ve ternary ile ayri ayri cozunuz)
+
+
+Kullanıcıdan bir sayi aliniz ve bunu sure olarak kabul ediniz(saniye) ve bu sure araliklari ile trafik lambalarinin(red,yellow,green) yanma sirasini belirleyiniz(eger sure 30 saniyeden az ise kullaniciya daha buyuk bir sayi girmesini ifade ediniz)(switch ve loop kullaniniz)
+
+
+Kullanicidan bir sayi aliniz bu sayi 3 ile bolunebiliyorsa HEY, 5 ile bolunebiliyora OLEY,hem uc hem 5 ile bolunebiliyora WONDERFUL yazdiriniz
+(if else ile ve ternary ile cozunuz)
+
+Ayni soruyu 1-100 sayi araligindaki sayilar icin de yapiniz

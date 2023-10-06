@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Add some basic styles for the traffic light simulation */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="message"></div>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+
+    <script>
+        let timeoutIds = [];
+        let running = false;
+
+        function showMessageAndChangeLight(message, color) {
+            document.getElementById("message").textContent = message;
+            document.body.style.backgroundColor = color;
+        }
+
+        function trafficLightSimulation() {
+            if (!running) return;
+
+            const greenLightDuration = 5000;
+            const yellowLightDuration = 2000;
+            const redLightDuration = 3000;
+
+            showMessageAndChangeLight("WAIT for green light", "red");
+
+            timeoutIds.push(setTimeout(function () {
+                showMessageAndChangeLight("READY for yellow light", "yellow");
+
+                timeoutIds.push(setTimeout(function () {
+                    showMessageAndChangeLight("GO GO GO for green light", "green");
+
+                    timeoutIds.push(setTimeout(trafficLightSimulation, redLightDuration));
+                }, yellowLightDuration));
+            }, greenLightDuration));
+        }
+
+        document.getElementById("startButton").addEventListener("click", function () {
+            if (!running) {
+                running = true;
+                trafficLightSimulation();
+            }
+        });
+
+        document.getElementById("stopButton").addEventListener("click", function () {
+            running = false;
+            // Clear all scheduled timeouts
+            timeoutIds.forEach(id => clearTimeout(id));
+            showMessageAndChangeLight("Simulation Stopped", "white");
+        });
+    </script>
+</body>
+</html> -->

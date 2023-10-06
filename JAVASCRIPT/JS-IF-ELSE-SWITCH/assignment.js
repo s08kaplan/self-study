@@ -403,19 +403,19 @@
 // }
 
 
-while (let i = 0; i < 10; i++) {
-    if (i === 5){
-        continue;
-    }console.log(i)
-}
+// while (let i = 0; i < 10; i++) {
+//     if (i === 5){
+//         continue;
+//     }console.log(i)
+// }
 
-let x = 5
-let message ="şart oluşmadı ama do while çalıştı"
+// let x = 5
+// let message ="şart oluşmadı ama do while çalıştı"
 
-do {
-    console.log(message);
-}
-while (x < 5){
-    console.log(message);
-}
+// do {
+//     console.log(message);
+// }
+// while (x < 5){
+//     console.log(message);
+// }
 
