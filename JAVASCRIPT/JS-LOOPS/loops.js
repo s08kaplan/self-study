@@ -100,7 +100,7 @@
 //     const greenLightDuration = 5000; // 5 seconds
 //     const yellowLightDuration = 2000; // 2 seconds
 //     const redLightDuration = 3000; // 3 seconds
-//
+
 //     // Function to display a message and change the light color
 //     function showMessageAndChangeLight(message, color) {
 //         console.log(message);
@@ -213,3 +213,6 @@
 //         message = `number is : ${i} and square of number is :${i**2} `
 //     }console.log(message);
 // }
+
+
+

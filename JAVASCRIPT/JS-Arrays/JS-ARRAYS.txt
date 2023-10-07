@@ -129,3 +129,97 @@ const cars2 = const cars = ["Saab", "Volvo", "BMW","Mercedes","Audi","Saab"]
 
 const myCars = cars.concat(cars2)
 console.log(myCars)
+
+
+====================================================
+
+FLAT()
+====================
+
+Flattening an array is the process of reducing the dimensionality of an array.
+
+The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+
+const myArr = [[1,2],[3,4],[5,6]];
+
+const newArr = myArr.flat();
+
+
+SPLICE()
+===================
+
+The splice() method can be used to add new items to an array:
+
+
+Let's look at the example below:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+
+The first parameter (2) defines the position where new elements should be added (spliced in).
+
+The second parameter (0) defines how many elements should be removed.
+
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+(NOTE : The splice() method returns an array with the deleted items)
+(NOTE-2: With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array)
+
+================================================================
+
+
+
+SLICE()
+==============
+
+The slice() method slices out a piece of an array into a new array.
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const myFavorite = fruits.slice(1);
+const yourFavorite = fruits.slice(2,4)
+
+
+
+===========LOOPS FOR IN, FOR OF=========================
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+let result = ""
+for (let i of fruits){
+result += i + " "
+
+}
+console.log(result);
+
+(NOTE: for OF returns the values in the given array)
+
+
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+let result = ""
+for (let i in fruits){
+result += i + " "
+
+}
+console.log(result);
+
+(NOTE: for IN returns the index numbers of the given array)
+
+another example to see the difference:
+
+const myArr = ["ali","veli","hasan",1,2,3,[1,2,"ayse"]];
+
+let result=""
+for (let i in myArr){
+    result += myArr[i]
+}
+console.log(result)
+
+
+const myArr = ["ali","veli","hasan",1,2,3,[1,2,"ayse"]];
+
+let result=""
+for (let i of myArr){
+    result += myArr[i]
+}
+console.log(result)

@@ -49,3 +49,64 @@
 // console.log(myCars)
 
 // const myFavorite = cars2.concat(cars)
+
+
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// console.log(fruits);
+// const myFavorite = fruits.slice(1);
+// console.log(myFavorite);
+// const yourFavorite = fruits.slice(2,4)
+// console.log(yourFavorite);
+// console.log(yourFavorite.length);
+
+
+
+
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// let result = ""
+// for (let i of fruits){
+// result += i + " "
+
+// }
+// console.log(result);
+
+
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// let result = ""
+// for (let i in fruits){
+// result += i + " "
+
+// }
+// console.log(result);
+
+// const myArr = ["ali","veli","hasan",1,2,3,[1,2,"ayse"]];
+
+// let result=""
+// for (let i in myArr){
+//     result += i + " "
+// }
+// console.log(result)
+
+// const myArr = ["ali","veli","hasan",1,2,3,[1,2,"ayse"]];
+
+// let result=""
+// for (let i of myArr){
+//     result += myArr[i]
+// }
+// console.log(result)
+
+
+
+
+
+
+// const myArr = ["ali","veli","hasan",1,2,3,[1,2,"ayse"]];
+
+// let result=""
+// for (let i of myArr){
+//     result += i + " "
+// }
+// console.log(result)
