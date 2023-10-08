@@ -211,7 +211,7 @@ const myArr = ["ali","veli","hasan",1,2,3,[1,2,"ayse"]];
 
 let result=""
 for (let i in myArr){
-    result += myArr[i]
+    result += i
 }
 console.log(result)
 
@@ -220,6 +220,6 @@ const myArr = ["ali","veli","hasan",1,2,3,[1,2,"ayse"]];
 
 let result=""
 for (let i of myArr){
-    result += myArr[i]
+    result += i
 }
 console.log(result)
