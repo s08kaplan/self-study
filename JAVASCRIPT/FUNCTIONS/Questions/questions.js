@@ -218,3 +218,21 @@
 // let text = "Hello, world!";
 // let newText = replaceLetter(text, "o", "X");
 // console.log(newText); // Output: "HellX, wxrld!"
+
+
+// let letters = "ABCDEFGHJKLMNOPQRSTUVWXYZ"
+// let result=""
+// for(let i in letters) {
+//     result+=i + " "
+// }
+// console.log(result);
+
+const cars = ["ferrari", "volvo", "audi", "mercedes"];
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  if (i === 0) {
+    cars[i] = "dogan"; // Replace "ferrari" with "dogan"
+  }
+  text += `The car index number ${i} in cars array is: ${cars[i]} `+"  ";
+}
+console.log(text);
