@@ -237,7 +237,7 @@
 // }
 // console.log(text);
 
-
+// ==================FUNCTIONS HW============================
 
 // let addNumbers = function operation(number1,number2){
 //   return number1 + number2
@@ -291,3 +291,33 @@
 // }
 
 // console.log(myCalculate(2,0,divideNumbers)); 
+
+
+
+// let addNumbers =() => number1 + number2
+
+
+// let subtractNumbers =()=> number1 - number2
+
+
+// let multiplyNumbers =(number1, number2)=>number1 * number2
+
+
+// let divideNumbers =(number1, number2)=>{
+//     if(number2 === 0){
+//         console.log("A number cannot divide by 0");
+//     }
+//     return number1 / number2
+// }
+
+
+// let myCalculate =(number1,number2,operation)=> operation(number1,number2)
+
+
+//  console.log(myCalculate(2,0,divideNumbers)); 
+
+
+const radius = Number(prompt("enter a radius value to calculate the area of circle:"))
+const PI = 3
+const areaCircle =()=> PI * radius**2
+console.log(areaCircle()); 
