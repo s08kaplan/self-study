@@ -317,7 +317,45 @@
 //  console.log(myCalculate(2,0,divideNumbers)); 
 
 
-const radius = Number(prompt("enter a radius value to calculate the area of circle:"))
-const PI = 3
-const areaCircle =()=> PI * radius**2
-console.log(areaCircle()); 
+// const radius = Number(prompt("enter a radius value to calculate the area of circle:"))
+// const PI = 3
+// const areaCircle =()=> PI * radius**2
+// console.log(areaCircle()); 
+
+
+// const radius = Number(prompt("enter a radius value to calculate the area of circle:"))
+// const myPI = 3
+// let areaCircle =(num)=> myPI * num**2
+// console.log(areaCircle(radius)); 
+
+
+// const yourBirthday =Number(prompt("enter your year of birthday :"))
+// let result =()=> new Date().getFullYear() - yourBirthday
+// console.log(result());
+
+// let base =Number(prompt("enter the base of the triangle :"))
+// let height = Number(prompt("enter the height of the triangle :"))
+// let areaTriangle =()=> (base * height)/2
+// console.log(areaTriangle()); 
+
+
+// const userNumber = Number(prompt("enter a number :"))
+// const userNumber2 = Number(prompt("enter another number :"))
+
+// const squareNumber =(num)=>num ** 2
+// const cubeNumber = (num)=>num ** 3
+// const powerNumber = (number1,number2=1)=>number1 ** number2
+
+// console.log(squareNumber(userNumber));
+// console.log(cubeNumber(userNumber));
+// console.log(powerNumber(userNumber,userNumber2));
+
+const year =1999
+let leapYearCheck = function(year){
+    if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+         return "the given year is a leap year"
+    }
+    return "NOT a leap year"
+}
+
+console.log(leapYearCheck(year)); 
