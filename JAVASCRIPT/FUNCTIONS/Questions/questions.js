@@ -227,12 +227,67 @@
 // }
 // console.log(result);
 
-const cars = ["ferrari", "volvo", "audi", "mercedes"];
-let text = "";
-for (let i = 0; i < cars.length; i++) {
-  if (i === 0) {
-    cars[i] = "dogan"; // Replace "ferrari" with "dogan"
-  }
-  text += `The car index number ${i} in cars array is: ${cars[i]} `+"  ";
-}
-console.log(text);
+// const cars = ["ferrari", "volvo", "audi", "mercedes"];
+// let text = "";
+// for (let i = 0; i < cars.length; i++) {
+//   if (i === 0) {
+//     cars[i] = "dogan"; // Replace "ferrari" with "dogan"
+//   }
+//   text += `The car index number ${i} in cars array is: ${cars[i]} `+"  ";
+// }
+// console.log(text);
+
+
+
+// let addNumbers = function operation(number1,number2){
+//   return number1 + number2
+// }
+
+// let subtractNumbers = function operation(number1, number2){
+//   return number1 - number2
+// }
+
+// let multiplyNumbers = function operation(number1, number2){
+//   return number1 * number2
+// }
+
+// let divideNumbers = function operation(number1, number2){
+//   if(number2 === 0){
+//       console.log("A number cannot divide by 0");
+//   }
+//   return number1 / number2
+// }
+
+
+// let myCalculate = function(number1,number2,operation){
+//   return operation(number1,number2)
+// }
+
+// console.log(myCalculate(2,3,addNumbers)); 
+
+
+// let addNumbers =(number1,number2) =>{
+//   return number1 + number2
+// }
+
+// let subtractNumbers =(number1, number2)=>{
+//   return number1 - number2
+// }
+
+// let multiplyNumbers =(number1, number2)=>{
+//   return number1 * number2
+// }
+
+// let divideNumbers =(number1, number2)=>{
+//   if(number2 === 0){
+//       console.log("A number cannot divide by 0");
+//   }
+//   return number1 / number2
+// }
+
+
+// let myCalculate =(number1,number2,operation)=>{
+//   return operation(number1,number2)
+// }
+
+// console.log(myCalculate(2,0,divideNumbers)); 
