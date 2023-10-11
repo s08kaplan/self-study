@@ -266,6 +266,8 @@
 // console.log(myCalculate(2,3,addNumbers)); 
 
 
+
+
 // let addNumbers =(number1,number2) =>{
 //   return number1 + number2
 // }
@@ -350,12 +352,20 @@
 // console.log(cubeNumber(userNumber));
 // console.log(powerNumber(userNumber,userNumber2));
 
-const year =1999
-let leapYearCheck = function(year){
-    if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
-         return "the given year is a leap year"
-    }
-    return "NOT a leap year"
-}
+// const year =1999
+// let leapYearCheck = function(year){
+//     if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+//          return "the given year is a leap year"
+//     }
+//     return "NOT a leap year"
+// }
 
-console.log(leapYearCheck(year)); 
+// console.log(leapYearCheck(year)); 
+
+
+// =================================================
+
+// let operation=(x,y)=>operationAdd(x,y)
+
+// let operationAdd=(x,y)=>x + y
+// console.log(operation(6,8));
