@@ -369,3 +369,67 @@
 
 // let operationAdd=(x,y)=>x + y
 // console.log(operation(6,8));
+
+
+// if/else yapısı
+// let yas = prompt("Lütfen yaşınızı giriniz:"); // Kullanıcıdan yaşını istiyoruz
+// let vatandas = confirm("TC vatandaşı mısınız?"); // Kullanıcıdan vatandaşlık durumunu istiyoruz
+
+// if (yas >= 18 && vatandas) {
+//     console.log("Oy kullanabilirsiniz.");
+// } else {
+//     console.log("Oy kullanamazsınız.");
+// }
+
+// const myCelciusToFahrenheit =(celcius)=> (celcius * 9)/5 + 32
+// console.log(myCelciusToFahrenheit(35));
+
+// const text = "Hellooo world!!!"
+// const reverseTextFinder = (text) => {
+//     let reversedText =""
+//     for(let i = text.length -1;i>=0;i-- ){
+//             reversedText += text[i]
+//     }
+//     return reversedText
+// }
+
+// console.log(reverseTextFinder(text));
+
+// const palindromeChecker = (userWord) => {
+//     let reversedUserWord = ""
+//     for(let i = userWord.length - 1;i >= 0;i--){
+//         reversedUserWord += userWord[i]
+//     }
+//     let message = ""
+//     if (userWord == reversedUserWord){
+//          message = `your word is a palindrome`
+//     }else {
+//          message = `your word is NOT a palindrome`
+//     }
+//      return message
+// }
+
+// console.log(palindromeChecker("aka"));
+
+// const vowels = "aeıioöuü";
+
+// const text = "hello world whats up?";
+
+// const vowelFinder = (text) => {
+//   let result = "";
+//   for (let i = 0; i < text.length; i++) {
+//     for (let j = 0; j < vowels.length; j++) {
+//       if (vowels[j] === text[i]) {
+//         result += text[i];
+//       }
+//     }
+//   }
+//   return result;
+// };
+//  console.log(vowelFinder(text));
+
+
+// const originalString = 'Hello, World!';
+
+// let myWord = originalString.slice(0,5)
+// console.log(myWord);
