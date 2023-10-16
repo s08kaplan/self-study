@@ -42,3 +42,9 @@ nav h1{
     background-color: #313131;
     
 }
+
+.h3ler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
