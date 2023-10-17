@@ -173,3 +173,74 @@ const gerson = {
   }
   
   console.log(gerson.fullName.apply(gerson1, ["Oslo", "Norway"]));
+
+  
+// const myCars = ["haci murat","dogan gorunumlu sahin","ferrari","mercedes","bmw"]
+// const names = ["ali","ahmed","ayse","murad","jenny"]
+
+// const matchArrays = (x,y) => {
+//     const ownerCars = []
+//     for (let i in x){
+//         matchArrays[i] = `${myCars[i]} ${names[i]}`
+//     }
+//     return matchArrays
+// }
+
+// console.log(matchArrays(myCars,names));
+
+// const arr = [2,3,5,6,8,9]
+// const myAdd = (x) => {
+//     let result = 0
+//     for(let i of x){
+// result += i
+//     }
+//     return result
+// }
+
+// console.log(myAdd(arr));
+
+
+// const myCars = ["haci murat","dogan gorunumlu sahin","ferrari","mercedes","bmw"]
+
+// const stringAdd = (x) =>{
+//     let result = ""
+//     for(let i of x){
+// result += i + " "
+//     }
+//     return result
+// }
+
+// console.log(stringAdd(myCars));
+
+// const myCars = ["haci murat","dogan gorunumlu sahin","ferrari","mercedes","bmw"]
+
+// carEach = myCars.forEach(car => console.log(car))
+// console.log(carEach);
+
+// console.log(myCars.forEach(car => console.log(car)));
+
+
+
+// const arr = [2,3,5,6,8,9]
+// const result = []
+// arr.forEach(num => result.push((num * 5)))
+// console.log(result);
+
+
+// const arr = [2,3,5,6,8,9]
+// result = arr.map((x) => x * 5)
+// console.log(result);
+
+// const names = ["Ali","Danny","veli","Jenny"]
+// result = names.map((x) => x.toUpperCase())
+// console.log(result);
+
+// const euro = 9.68;
+// const dolar = 8.1;
+// const tIFiyatlar = [100, 150, 100, 50, 80];
+
+// resultDolar = tIFiyatlar.map((x) => (x/8.1).toFixed(2))
+// resultEuro = tIFiyatlar.map((x)=> (x / 9.68).toFixed(2))
+
+// console.log(resultDolar);
+// console.log(resultEuro);
