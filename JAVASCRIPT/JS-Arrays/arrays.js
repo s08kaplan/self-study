@@ -246,20 +246,45 @@
 // console.log(resultEuro);
 
 
+// const coordinates = [-100, 150, -32, 43, -20]
+// const negativeCoordinates = coordinates.filter((coordinate)=> coordinate < 0)
+// console.log(negativeCoordinates);
+
+
+// const coordinates = [-100, 150, -32, 43, -20]
+
+// const negativesToPositives = coordinates
+// .filter((coordinate)=>  coordinate < 0)
+// .map((x)=> -1 * x)
+// .forEach((x)=>console.log(x))
+
+
+//  Bir Firma, 3000 TL den az olan maaslara %10 zam yapmak
+// istiyor ve zam yapilan bu kisilere toplam kaç TL ödenecegini bilmek istiyor.
+// Ilgili programi yaziniz.
+
+
+
+// const maaslar = [3000, 2891, 3500, 4200, 7000, 2500];
+
+// result = maaslar
+// .filter((maas)=> maas < 3000)
+// .map((filteredMaas)=> (filteredMaas * 1.1).toFixed(2))
+// .forEach((message)=>console.log(message))
 
 
 // =========================WORKSHOP==============================
 
 // 3. Soru: Bir dizi içindeki metin öğelerini birleştirerek tek bir metin oluşturmak için hangi dizi yöntemini ve diziyi nasıl kullanırsınız?
 
-let words = ["Merhaba", "dünya", "bu", "bir", "örnektir"];
+// let words = ["Merhaba", "dünya", "bu", "bir", "örnektir"];
 
-console.log(words.join(" "));
+// console.log(words.join(" "));
 
 // 4. Soru: Bir cümleyi alın ve kelimeleri ters sırayla birleştirerek yeni bir cümle oluşturun.
 
-let sentence = "JavaScript harika bir dil";
-console.log(sentence.split(" ").reverse().join(" "));
+// let sentence = "JavaScript harika bir dil";
+// console.log(sentence.split(" ").reverse().join(" "));
 
 // 5. Soru: Bir metinde "u" harfini içeren kaç kelime olduğunu bulmak için hangi dizi yöntemini kullanırsınız ve nasıl yaparsınız?
 
@@ -297,3 +322,9 @@ console.log(sentence.split(" ").reverse().join(" "));
 // result = isim1 +", " + isim2
 
 // console.log(result);
+
+
+// ============================================================================
+
+
+
