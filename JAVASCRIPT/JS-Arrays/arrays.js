@@ -326,5 +326,17 @@
 
 // ============================================================================
 
+// Given an array of objects representing people, each with a name and age, write a function that filters out people over a certain age and returns an array of their names.
+// before solution trying something else and not finished
+const people = ["Ali", "Veli", "Danny", "Jenny"]
+const ages = [25, 30, 27, 26]
 
+const matchInfo = []
 
+const myFunc =(people,ages)=>{
+    for (let i = 0; i < people.length; i++) {
+        matchInfo.push(people[i]+": "+ages[i])   
+    }
+    return matchInfo
+}
+console.log(myFunc(people,ages));
