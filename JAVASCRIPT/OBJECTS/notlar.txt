@@ -1,0 +1,601 @@
+Objectler key:value(aslında property:property value) prensibine göre çalışırlar bu yüzden objectdeki bir değere temel olarak 2 şekilde(loop kullanarak da ulaşılabilir ama zorlamaya gerek yok),ulaşılabilir örneğin:
+
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+
+
+  console.log(person.name);  // John
+  console.log(person["name"]); // John
+
+  (ama DOM kullanılırken kodların kolay okunabilmesi için "." tercih edilir ki bu konudaki temel prensiplere birazdan kısaca değinmeye çalışacağız.)
+
+  bir başka örnek(objenin elemanı veya elemanları obje olabilir):
+   const person1 = {
+    firstName: {fake1:"John",
+    fake2:"Betty",
+    fake3:"Ronaldo"
+  },
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+  };
+
+  console.log(person1.firstName.fake1);
+  console.log(person1.firstName.fake2);
+  console.log(person1.firstName.fake3);
+  console.log("******************************************");
+  console.log(person1["firstName"]["fake1"]);
+  console.log(person1["firstName"]["fake2"]);
+  console.log(person1["firstName"]["fake3"]);
+
+  DOM konusuna girmeden temel olarak bir konuyu da ifade etmeye çalışalım şöyle ki objenin elemanları fonksiyon da olabilir :
+
+    const person2 = {
+    firstName: "Richard",
+    lastName: "Danny",
+    id: 556622145,
+    fullName: function() {
+      return person2.firstName + " " + person2.lastName;
+    }
+  };
+
+  console.log(person2.fullName());// burada fullName propertysinin değeri bir fonksiyon olduğu için yazdırırken () eklemeyi unutmayalım
+  eğer unutursak bize fonksiyonun yapısını döner.
+
+
+property value larına ulaşmanın bir yolu daha var ancak bu şekilde yapılırsa sonuç arraye döndürülür ve o şekilde sonuç olarak geri döner örneğin:
+
+
+const person2 = {
+    firstName: "Richard",
+    lastName: "Danny",
+    id: 556622145,
+    fullName: function() {
+      return person2.firstName + " " + person2.lastName;
+    }
+  };
+
+
+  const myArray = Object.values(person2)
+  console.log(myArray);// burada fonsiyon ile belirtilen kısım fonksiyonun yapısı olarak döner diğerleri normal elemanlar olarak döner.
+
+
+başka ulaşma şekilleri de vardır o kısmı daha sonra göreceğiz kısmetse.
+
+şimdi DOM a bir göz atalım:
+
+en temel kuralı unutmayalım DOM da her bir ifade bir OBJECT'dir o yüzden değerlere ulaşırken "." konulur
+
+(calculator faciasının başında screen.value demiştik şimdi kafamızdaki soru işaretleri gitmiştir eğer gitmediyse birazdan gidecektir rahat olalım JS nin tadını çıkaralım)
+
+
+                                                    The HTML DOM Tree of Objects
+
+                                                              DOCUMENT
+                                                                 ||
+                                                                 ||
+                                                            ROOT ELEMENT
+                                                -----------------||------------------            
+                                                ||                                  ||
+                                                ||                                  ||
+                                              ELEMENT                             ELEMENT
+                                               <head>                              <body>
+                                                ||                                   ||
+                                              ELEMENT                     ------------------------
+                                              <title>                    ||                      ||
+                                                ||        Attribute ----ELEMENT                ELEMENT
+                                                ||          "href"       <a>                     <h1>
+                                                ||                        ||                      ||
+                                               TEXT                      Text                    Text
+                                             "My title"                 "My link"              "My header"
+
+
+    JAVASCRIPT ile sayfada yok yok hemen hemen herşeye müdahale edebiliyoruz haydi basit ve temel olanlar ile başlayalım
+
+
+        Tüm HTML elementlerinin birer object olduğunu unutmayalım
+
+
+bir HTML elementine ulaşmanın bir kaç yolundan bahsetmeye çalışacağız:
+=================================================
+         birinci olarak "ID" ile:
+====================================================         
+         document (DOM un en tepesini temsil eder)
+         document.getElementById("id name")(buraya kadar olan kısımda DOM'dan id'si belirlenen elementi seçeriz)
+         sonrada ne yapmak istiyorsak onu belirtiriz mesela örneğe bakalım
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Page</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";//(document.getElementById("id name") ile element(object)seçildi ve .innerHTML ile elementin içine girilerek yapılmak istenen değişiklik yapıldı)
+</script>
+
+</body>
+</html>
+
+bir başka örnek
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p id="intro">Finding HTML Elements by Id</p>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("intro");
+
+document.getElementById("demo").innerHTML = 
+"We can add remove or do something else : " + element.innerHTML;//(seçilen DOM elementi(objesi) bir değişkene atandı sonra da o değişkenin value   değeri üzerinde değişiklik yapmak için "." konduktan sonra "innerHTML" seçilerek içine girildi ve yazılması istenen ifade yerleştirildi)
+
+</script>
+
+</body>
+</html>   
+
+===================================
+ikinci olarak TagName ile:
+====================================
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 'heeeey tagName çalışıyor yuppiiii: ' + element[0].innerHTML; //(burada element[0]yazılmasının sebebi p gibi taglar birden fazla olabileceği için spesifik yani hangi p ye işlem yapılacağının belirtilmesi adına index numarası ile işlem yapılmasıdır)
+(burada yalnızca bir tane p tag ı var neden index kullanalım diye akla gelebilir ancak p bir collection ifade ettiği içindir zaten metodamdikkat edilirse getElementsByTagName(elements yani çoğul ifadedir) ama index kullanmak istemiyorum denirse en güzeli "getElementById"yöntemidir orada indexe gerek yoktur çünkü "id" UNIQUE tir yani tektir.)
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>buraya dikkat edelim</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 
+`id ifadesi main olan arkadaşın p taglarını seçtikten sonra y[0] ile ilk p tag ının içindeki ifadenin aynısı(çünkü y[0].innerHTML seçilmiş) id ifadesi demo olan arkadaşın içerisine yazılmak istenmiş: ' + y[0].innerHTML;`
+
+</script>
+
+</body>
+</html>
+
+====================================
+Üçüncü olarak ClassName ile:
+======================================
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">gençler bu da çalışıyor hadi kutlama yapalım calculator faciasını unutalım ki facia kısmı bana ait malumunuz olmak üzere.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML = 
+`class name ifadeleri aynı iki elementten ilkinin(çünkü x[0] seçilmiş) içerisindeki ifadenin yazının ya da her ne var ise onun aynısı id'si demo olan elementin içerisine yazılmak istenmiş ki yazılmış:))): ` + x[0].innerHTML;
+</script>
+
+</body>
+</html>
+
+=======================================
+Dördüncü olarak CSS Selectors ile:
+=========================================
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.(Ne çektin be Dünyaaaaa)</p>
+<p class="intro">şaşılacak gibi ama bu da çalışıyor galiba şeytanın bacağını kırdık </p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = 
+'haydi haydi js : ' + x[0].innerHTML;//(burada da CSS de yazdığımızın aynı şekli ile seçiyoruz ve sonra yapmak istediğimiz değişikliği uyguluyoruz)
+</script>
+
+</body>
+</html>
+
+ya da 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p id="hey">Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.(Ne çektin be Dünyaaaaa)</p>
+<p class="intro">şaşılacak gibi ama bu da çalışıyor galiba şeytanın bacağını kırdık </p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.querySelectorAll("p.intro");
+document.getElementById("hey").innerHTML = 
+'haydi bakalım: ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>
+
+
+
+===================================================
+
+sadece boş olanları değil var olan içeriği de değiştirmek mümkün bakalım beraber:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="hop">sadece boş olanları değil var olan yazıyı veya her ne ise onu da değiştirmek mümkün</h1>
+
+<script>
+const element = document.getElementById("hop");
+element.innerHTML = "hadi canım sen de";
+</script>
+
+<p>JavaScript changed "Old Heading" to "New Heading".</p>
+
+</body>
+</html> 
+
+
+==========================================================================
+ŞİMDİ de CSS değişiklikleri yapalım
+===========================================================================
+burada element(object)seçildikten sonra .style.neyi değiştirmek istersek onu yazıyoruz ancak CAMELCASE olmalıörneğin:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Changing the HTML style:</p>
+
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blueviolet";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "50px";
+</script>
+
+
+</body>
+</html>
+
+
+bir başka örnek:
+
+(onclick verilmiş butona basmayı unutmayalım lütfen)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+
+</body>
+</html>
+
+=======================================================
+          EVENTS
+======================================================
+eventler onlarca olmasına rağmen en çok kullanılanları
+onclick onmouseover onmouseout  onmousedown onmouseup onload onfocus 
+
+önekler herşeyi açıklıyor haydi zaman kaybetmeden örneklere
+
+ilk örnekte diğerlerinden farklı olarak  fonksiyon tanımlanmış ve şartlara göre nasıl değişiklik yapacağı belirlenmiş
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+============================================
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<p>Click "Try it" to execute the displayDate() function.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").onclick = displayDate;
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html> 
+
+=====================================================
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+
+
+bu örnekte diğerlerinden farklı olarak iki fonksiyon tanımlanmış ve şartlara göre nasıl değişiklik yapacakları belirlenmiş
+burada (this) kelimesi Class lar konusunda işlenecek olup aslında adres gösteren bir belirteçtir kendisi bize ana kaynakla yani Class ile aramızdaki adres sorumlusu gibidir şimdilik genel manada çalışma sistematiğine odaklanalım
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+</script>
+
+</body>
+</html> 
+
+==============================================================
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html> 
+
+
+
+=========================================================
+========================================================
+             addEventListener
+=========================================================
+=========================================================
+
+
+bu yöntemin bir kısmına değinip şimdilik bırakacağız
+
+bu yöntemle bir elemente değişik eventler ekleyebiliriz en çok kullanılan ise "click" attribute dür.
+içerisine bir event(click,mouseover,mouseout gibi)ve bir de fonksiyon alır örneğin:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<p id="hey">bakalım ne değişecek</p>
+
+
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", function() {
+  document.getElementById("hey").innerHTML=("Hello World!");
+});
+</script>
+
+</body>
+</html>
+
+
+==============================================
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add two click events to the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+let x = document.getElementById("myBtn");
+x.addEventListener("click", myFunction);
+x.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+  x.style.color="blueviolet";
+}
+
+function someOtherFunction() {
+  x.style.fontSize="50px";
+}
+</script>
+
+</body>
+</html>
+
+
+check out the difference
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add two click events to the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+let y = document.querySelector("h2");
+let x = document.getElementById("myBtn");
+x.addEventListener("click", myFunction);
+x.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+  y.style.color="blueviolet";
+}
+
+function someOtherFunction() {
+  y.style.fontSize="50px";
+}
+</script>
+
+</body>
+</html>
+
+======================================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Moused over!<br>"
+  document.querySelectorAll("p")[0].innerHTML = "how are you world?";
+ 
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML = "Clicked!<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML = "Moused out!<br>";
+}
+</script>
+
+</body>
+</html>

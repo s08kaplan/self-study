@@ -16,9 +16,9 @@ const operate = (operator) => {
 };
 
 const result = () => {
-  if (op == "+" && op == "-") {
-    display.value = "you can not do this";
-  }
+  // if (op == "+" && op == "-") {
+  //   display.value = "you can not do this";
+  // }
   if (op == "*") {
     secondNumber = display.value;
     display.value = firstNumber * secondNumber;
