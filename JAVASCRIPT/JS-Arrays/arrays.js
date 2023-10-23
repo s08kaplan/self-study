@@ -328,15 +328,170 @@
 
 // Given an array of objects representing people, each with a name and age, write a function that filters out people over a certain age and returns an array of their names.
 // before solution trying something else and not finished
-const people = ["Ali", "Veli", "Danny", "Jenny"]
-const ages = [25, 30, 27, 26]
+// const people = ["Ali", "Veli", "Danny", "Jenny"]
+// const ages = [25, 30, 27, 26]
 
-const matchInfo = []
+// const matchInfo = []
 
-const myFunc =(people,ages)=>{
-    for (let i = 0; i < people.length; i++) {
-        matchInfo.push(people[i]+": "+ages[i])   
-    }
-    return matchInfo
-}
-console.log(myFunc(people,ages));
+// const myFunc =(people,ages)=>{
+//     for (let i = 0; i < people.length; i++) {
+//         matchInfo.push(people[i]+": "+ages[i])   
+//     }
+//     return matchInfo
+// }
+// console.log(myFunc(people,ages));
+
+
+
+
+// Arrays
+// Certainly, here's another problem that involves JavaScript's `forEach`, `filter`, `map`, and arrays:
+
+// *Problem:* You are given an array of strings containing names of people. You need to perform the following tasks:
+
+// 1.  method to create a new array that contains only names with more than 5 characters.
+// 2. to create a new array where each name is converted to uppercase.
+// 3.  to print each uppercase name in the console.
+
+// *Instructions:*
+
+// 1. Start with an array of names, for example: `["Alice", "Bob", "Charlie", "David", "Eve"]`.
+// 2.  method to create a new array that contains only names with more than 5 characters.
+// 3.  to create a new array where each name is converted to uppercase.
+// 4. method to print each uppercase name in the console.
+
+// *Expected Output:*
+
+
+// CHARLIE
+// DAVID
+
+
+// Your solution should demonstrate the use of `filter` to select names with more than 5 characters, `map` to convert those names to uppercase, and `forEach` to log the results.
+
+
+
+
+// Sure, here's a problem that involves JavaScript's `forEach`, `filter`, `map`, and arrays:
+
+// *Problem:* You are given an array of numbers. You need to perform the following tasks:
+
+// 1.  method to create a new array that contains only even numbers from the original array.
+// 2. to create a new array where each number is squared (each number is raised to the power of 2).
+// 3.  method to log the result of each squared number in the console.
+
+// *Instructions:*
+
+// 1. Start with an array of numbers, for example: `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`.
+// 2.  to create a new array that contains only even numbers.
+// 3.  to create a new array where each number is squared.
+// 4.  method to log each squared number in the console.
+
+// *Expected Output:*
+
+
+// 4
+// 16
+// 36
+// 64
+// 100
+
+
+// Your solution should demonstrate the use of `filter` to select even numbers, `map` to square those numbers, and `forEach` to log the results.
+
+
+
+
+
+// Of course! Here are some problems for you to solve that involve the use of `filter`, `map`, and `forEach` in JavaScript.
+
+// *Basic Level:*
+
+// 1. *Filter and Map:*
+//    Given an array of numbers, filter out the even numbers and then create a new array where each number is doubled.
+
+// 2. *Filter Names:*
+//    Given an array of strings containing names, filter out the names that start with the letter "A."
+
+// 3. *Calculate Total:*
+//    Given an array of prices, use `map` to calculate the total cost after applying a 10% discount to each price.
+
+// *Intermediate Level:*
+
+// 4. *Filter Unique Values:*
+//    Given an array of numbers, remove duplicate values using `filter` to create a new array with unique values.
+
+// 5. *Transform Data:*
+//    You have an array of objects, each with properties `name` and `age`. Use `map` to create a new array with only the names.
+
+// 6. *Sum of Squares:*
+//    Given an array of numbers, use `forEach` to calculate the sum of the squares of each number.
+
+// Feel free to choose any problem and solve it. If you need guidance or solutions, feel free to ask!
+
+
+
+
+
+
+
+// const people2= ["Ali", "Veli", "Danny", "Jenny"]
+
+// const people3 = ["Alice", "Bob", "Charlie", "David", "Eve"]
+
+
+// const result = people2
+// .filter((name)=> name.length >= 5)
+// .map((name)=>name.toUpperCase())
+
+// console.log(result);
+
+
+// const result2 = people3
+// .filter((word)=>word.length >= 4)
+// .map((letter)=> letter.toLowerCase())
+// console.log("************************************");
+// console.log(result2);
+
+
+
+
+
+
+
+
+
+// const result = numbers
+// .filter((number)=> number % 2 === 0)
+// // .map((number)=> number ** 2)
+// .forEach((number)=> console.log(number ** 2))
+
+
+// console.log(result);
+// console.log(numbers);
+// console.log(result);
+
+
+// const randomNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+
+// const ourResult = randomNumbers
+// .reduce((number1,number2)=> (number1 + number2),5)
+// console.log(ourResult);
+
+// const ourResult2 = randomNumbers
+// .reduce((a,b)=> a - b)
+// console.log(ourResult2);
+
+
+const numbers = [1,2,4,7,9,11]
+
+const result3 = numbers
+.reduce((x,y)=> x - y)
+console.log(result3);
+
+const result4 = numbers
+.reduceRight((x,y)=> (x - y),4)
+
+console.log(result4);
