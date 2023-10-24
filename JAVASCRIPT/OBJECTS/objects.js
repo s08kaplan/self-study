@@ -89,4 +89,47 @@ const result3 = (obj) => {
 
 const highest = result3(studentScores);
 console.log(`The highest score is ${highest}`);
+// Write a function that compares two objects and returns true if they have the same properties and values, and false otherwise.
+
+
+const person1 = {
+  name: "John",
+  age: 25,
+  city: "New York",
+};
+
+const person2 = {
+  name: "Alice",
+  age: 30,
+  city: "Los Angeles",
+};
+
+const check = (obj1, obj2) => {
+  // Check if both objects have the same number of properties
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  // Check if the properties and their values are the same
+  for (const key of keys1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const conclusion = check(person1, person2);
+
+if (conclusion) {
+  console.log("The objects have the same properties and values.");
+} else {
+  console.log("The objects are different.");
+}
+
+
 
