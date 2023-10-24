@@ -55,3 +55,38 @@ const library = [
 
 // console.log(Object.values(library));
 console.log(library[0].valueOf());
+
+const myResult = library.map((arr) => ({
+  price: "20$",
+  author: arr.author,
+}));
+console.log(myResult);
+
+const myResult2 = (library[1].price = 30);
+console.log(library);
+
+const studentScores = {
+  Alice: 95,
+  Bob: 87,
+  Charlie: 92,
+  David: 78,
+  Eve: 88,
+};
+
+// Given an object with properties representing student names and their respective scores, write a function to find and return the name of the student with the highest score
+
+
+let highestScore = 0;
+
+const result3 = (obj) => {
+  for (let student in obj) {
+    if (obj[student] > highestScore) {
+      highestScore = obj[student];
+    }
+  }
+  return highestScore;
+};
+
+const highest = result3(studentScores);
+console.log(`The highest score is ${highest}`);
+
