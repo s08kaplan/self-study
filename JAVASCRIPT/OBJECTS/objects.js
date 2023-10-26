@@ -75,7 +75,6 @@
 
 // // // Given an object with properties representing student names and their respective scores, write a function to find and return the name of the student with the highest score
 
-
 // // let highestScore = 0;
 
 // // const result3 = (obj) => {
@@ -90,7 +89,6 @@
 // // const highest = result3(studentScores);
 // // console.log(`The highest score is ${highest}`);
 // // // Write a function that compares two objects and returns true if they have the same properties and values, and false otherwise.
-
 
 // // const person1 = {
 // //   name: "John",
@@ -131,14 +129,6 @@
 // //   console.log("The objects are different.");
 // // }
 
-
-
-
-
-
-
-
-
 // // const person = {
 // //   firstName: "John",
 // //   lastName: "Doe",
@@ -155,11 +145,9 @@
 // // console.log("*******===============********************");
 // // console.log(Object.entries(person));
 
-// // console.log(person.firstName); 
+// // console.log(person.firstName);
 // // console.log(person["firstName"]);
 // // console.log(person.address.zipCode);
-
-
 
 // // const school = {
 // //   name: "Example School",
@@ -177,14 +165,10 @@
 // //   ]
 // // };
 
-// // console.log(school.students[0].firstName); 
-// // console.log(school.students[1].grade); 
+// // console.log(school.students[0].firstName);
+// // console.log(school.students[1].grade);
 
 // // const studentsss = [{firstName: "Alice",lastName: "Smith",grade: 9}, {firstName: "Bob",lastName: "Johnson",grade: 10}]
-
-
-
-
 
 // // const organization = {
 // //   name: "Tech Company",
@@ -203,19 +187,15 @@
 // //   }
 // // };
 
-// // console.log(organization.departments.hr.employees[1]); 
-// // console.log(organization["departments"]["development"]["employees"][1]); 
+// // console.log(organization.departments.hr.employees[1]);
+// // console.log(organization["departments"]["development"]["employees"][1]);
 // // console.log(organization.myChoice());
-
-
-
-
 
 // const person = {
 //   firstName: 'John',
 //   lastName: 'Doe',
 //   fullName: function() {
-    
+
 //     return `${this.firstName} ${this.lastName}`;
 //   },
 //   greet: function() { console.log('hello'); },
@@ -224,7 +204,6 @@
 // // console.log(person.fullName());
 // console.log(person.greet());
 // console.log(person.greet2());
-
 
 // Certainly! The use of the prototype in JavaScript provides several advantages, including efficient memory usage and the ability to add methods or properties to multiple objects of the same constructor. Let me explain these advantages simply:
 
@@ -257,3 +236,77 @@
 
 
 
+
+
+const posts = [
+  {
+    title: "Post 1",
+    tags: ["php", "css"],
+  },
+
+  {
+    title: "Post 2",
+    tags: ["javascript", "html5"],
+  },
+  {
+    title: "Post 3",
+    tags: ["html5", "json"],
+  },
+];
+ const result4 = posts.reduce((acc,obj)=> [...acc,...obj["tags"]],[])
+ console.log(result4);
+
+ const lastResult = result4.reduce((acc,item)=>{
+    if(!acc.includes(item)){
+        acc.push(item)
+    }
+    return acc
+ },[])
+ console.log(lastResult);
+ 
+
+
+ const valuesOfArr = [1,2,1,5,1,4,2,6,2,8]
+ const myChoice2 = valuesOfArr.reduce((acc,number)=>{
+    if(!acc.includes(number)){
+        acc.push(number)
+    }
+    return acc
+ },[])
+
+ console.log(myChoice2.sort((a,b)=> a-b));
+
+
+
+ 
+ const organization = {
+ 
+   name: "Tech Company",
+   departments: {
+     hr: {
+       manager: "Alice",
+       employees: ["Bob", "Charlie"]
+     },
+     development: {
+       manager: "David",
+       employeess: ["Eve", "Frank"]
+     }
+   }
+}
+
+
+const {departments}=organization
+console.log(departments);
+console.log("****************************");
+const {departments:{hr}}=organization
+console.log(hr);
+console.log("*****************************");
+const {departments:{hr:{employees}}}= organization
+console.log(employees);
+console.log("*********************************");
+
+const {departments:{development:{employeess=[,p]}}}= organization
+console.log(employeess);
+console.log("************************************");
+
+console.log(p);
