@@ -238,75 +238,168 @@
 
 
 
-const posts = [
-  {
-    title: "Post 1",
-    tags: ["php", "css"],
-  },
+// const posts = [
+//   {
+//     title: "Post 1",
+//     tags: ["php", "css"],
+//   },
 
-  {
-    title: "Post 2",
-    tags: ["javascript", "html5"],
-  },
-  {
-    title: "Post 3",
-    tags: ["html5", "json"],
-  },
-];
- const result4 = posts.reduce((acc,obj)=> [...acc,...obj["tags"]],[])
- console.log(result4);
+//   {
+//     title: "Post 2",
+//     tags: ["javascript", "html5"],
+//   },
+//   {
+//     title: "Post 3",
+//     tags: ["html5", "json"],
+//   },
+// ];
+//  const result4 = posts.reduce((acc,obj)=> [...acc,...obj["tags"]],[])
+//  console.log(result4);
 
- const lastResult = result4.reduce((acc,item)=>{
-    if(!acc.includes(item)){
-        acc.push(item)
-    }
-    return acc
- },[])
- console.log(lastResult);
+//  const lastResult = result4.reduce((acc,item)=>{
+//     if(!acc.includes(item)){
+//         acc.push(item)
+//     }
+//     return acc
+//  },[])
+//  console.log(lastResult);
  
 
 
- const valuesOfArr = [1,2,1,5,1,4,2,6,2,8]
- const myChoice2 = valuesOfArr.reduce((acc,number)=>{
-    if(!acc.includes(number)){
-        acc.push(number)
-    }
-    return acc
- },[])
+//  const valuesOfArr = [1,2,1,5,1,4,2,6,2,8]
+//  const myChoice2 = valuesOfArr.reduce((acc,number)=>{
+//     if(!acc.includes(number)){
+//         acc.push(number)
+//     }
+//     return acc
+//  },[])
 
- console.log(myChoice2.sort((a,b)=> a-b));
+//  console.log(myChoice2.sort((a,b)=> a-b));
 
 
 
  
- const organization = {
+//  const organization = {
  
-   name: "Tech Company",
-   departments: {
-     hr: {
-       manager: "Alice",
-       employees: ["Bob", "Charlie"]
-     },
-     development: {
-       manager: "David",
-       employeess: ["Eve", "Frank"]
-     }
-   }
+//    name: "Tech Company",
+//    departments: {
+//      hr: {
+//        manager: "Alice",
+//        employees: ["Bob", "Charlie"]
+//      },
+//      development: {
+//        manager: "David",
+//        employeess: ["Eve", "Frank"]
+//      }
+//    }
+// }
+
+
+// const {departments}=organization
+// console.log(departments);
+// console.log("****************************");
+// const {departments:{hr}}=organization
+// console.log(hr);
+// console.log("*****************************");
+// const {departments:{hr:{employees}}}= organization
+// console.log(employees);
+// console.log("*********************************");
+
+// const {departments:{development:{employeess:[,p]}}}= organization
+// console.log(employeess);
+// console.log("************************************");
+
+// console.log(p);
+
+// Destructure and assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
+
+// const constants = [2.72, 3.14, 9.81, 37, 100]
+// const [e,pi,gravity,humanBodyTemp,waterBoilingTemp]= constants
+
+// console.log(humanBodyTemp);
+// const newValue = [firstValue,secondValue,...others] =constants
+// console.log(others);
+// console.log(firstValue);
+// ======================================================
+
+// Destructure and assign the elements of countries array to fin, est, sw, den, nor
+
+// const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
+
+// const [fin,est,sw,den,nor] = countries
+// console.log(den);
+// console.log(nor);
+
+// ================================================
+
+// Destructure the rectangle object by its properties or keys
+
+// const rectangle = {
+//   width: 20,
+//   height: 10,
+//   area: 200,
+//   perimeter: 60
+// }
+
+// const {width:w,height:h,area,perimeter:p} = rectangle
+
+// console.log(p);
+// console.log(area);
+// console.log(w);
+
+
+// =======================================
+
+
+
+//Iterate through the users array and get all the keys of the object using destructuring
+
+
+const users = [
+{
+  name:'Brook',
+  scores:75,
+  skills:['HTM', 'CSS', 'JS'],
+  age:16
+},
+{
+  name:'Alex',
+  scores:80,
+  skills:['HTM', 'CSS', 'JS'],
+  age:18
+},
+{
+  name:'David',
+  scores:75,
+  skills:['HTM', 'CSS'],
+  age:22
+},
+{
+  name:'John',
+  scores:85,
+  skills:['HTML'],
+  age:25
+},
+{
+  name:'Sara',
+  scores:95,
+  skills:['HTM', 'CSS', 'JS'],
+  age: 26
+},
+{
+  name:'Martha',
+  scores:80,
+  skills:['HTM', 'CSS', 'JS'],
+  age:18
+},
+{
+  name:'Thomas',
+  scores:90,
+  skills:['HTM', 'CSS', 'JS'],
+  age:20
 }
+]
 
 
-const {departments}=organization
-console.log(departments);
-console.log("****************************");
-const {departments:{hr}}=organization
-console.log(hr);
-console.log("*****************************");
-const {departments:{hr:{employees}}}= organization
-console.log(employees);
-console.log("*********************************");
 
-const {departments:{development:{employeess=[,p]}}}= organization
-console.log(employeess);
-console.log("************************************");
 
-console.log(p);
