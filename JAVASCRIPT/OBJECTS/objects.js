@@ -401,5 +401,117 @@ const users = [
 ]
 
 
+// const names = ["Alice", "Bob", "Charlie"];
+// //Write your code here
+// const nameLengths = names
+// .map(name=> name.length )
+// console.log(nameLengths) // [5, 3, 7]
 
+
+// const words = ["apple", "banana", "cherry"];
+// const capitalizedWords = words
+// .map(name=>name.toUpperCase())
+// console.log(capitalizedWords)
+
+
+// function deepFreeze (o) {
+//   Object.freeze(o);
+//   if (o === undefined) {
+//     return o;
+//   }
+
+//   Object.getOwnPropertyNames(o).forEach(function (prop) {
+//     if (o[prop] !== null
+//     && (typeof o[prop] === "object" || typeof o[prop] === "function")
+//     && !Object.isFrozen(o[prop])) {
+//       deepFreeze(o[prop]);
+//     }
+//   });
+
+//   return o;
+// };
+
+
+// const products = [
+//   { name: "Product 1", price: 20, category: "Electronics" },
+//   { name: "Product 2", price: 30, category: "Clothes" },
+//   { name: "Product 3", price: 40, category: "Electronics" },
+//   { name: "Product 4", price: 50, category: "Clothes" },
+//   { name: "Product 5", price: 60, category: "Clothes" },
+//   { name: "Product 6", price: 70, category: "Electronics" },
+//   { name: "Product 7", price: 80, category: "Clothes" },
+//   { name: "Product 8", price: 90, category: "Electronics" },
+//   ];
+// const[{products:{price},products:{category}}]=products
+// const mySolution = products
+// .filter(product=> product.category === "Electronics")
+// .map(obj=>obj.price)
+// .reduce((sum,price)=> sum + price)
+
+
+// const electronics = products
+// .filter(product=> (product.category === "Electronics"))
+
+// const electronicsLength = electronics.length
+// const electronicsAverage = mySolution/electronicsLength
+
+// console.log(electronicsAverage)
+
+
+// const mySolution2 = products
+// .filter(product=> product.category === "Clothes")
+// .map(obj=>obj.price)
+// .reduce((sum,price)=> sum + price)
+
+
+// const clothes = products
+// .filter(product=> (product.category === "Clothes"))
+
+// const clothesLength = electronics.length
+// const clothesAverage = mySolution/electronicsLength
+
+// console.log(clothesAverage)
+
+
+// let wantedResultForElectronics = electronicsAverage > 50 && electronicsAverage
+// let wantedResultForClothes = clothesAverage > 50 && clothesAverage
+
+// console.log(wantedResultForClothes,wantedResultForElectronics);
+
+
+
+const products = [
+  { name: "Product 1", price: 20, category: "Electronics" },
+  { name: "Product 2", price: 30, category: "Clothes" },
+  { name: "Product 3", price: 40, category: "Electronics" },
+  { name: "Product 4", price: 50, category: "Clothes" },
+  { name: "Product 5", price: 60, category: "Clothes" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+  { name: "Product 7", price: 80, category: "Clothes" },
+  { name: "Product 8", price: 90, category: "Electronics" },
+  ];
+
+  const sumOfElectronics = products.reduce((acc,item)=> {
+    
+   if(item.category==="Electronics"){
+   return acc + item.price}
+   else {
+    return acc 
+   }
+ 
+  },0)
+  console.log(sumOfElectronics);
+
+  
+
+  const sumOfClothes = products.reduce((acc,item)=> {
+    
+    if(item.category==="Clothes"){
+    return acc + item.price}
+    else {
+     return acc 
+    }
+  
+   },0)
+console.log(sumOfClothes);
 
