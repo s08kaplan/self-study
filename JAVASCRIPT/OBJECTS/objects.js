@@ -480,38 +480,152 @@ const users = [
 
 
 
-const products = [
-  { name: "Product 1", price: 20, category: "Electronics" },
-  { name: "Product 2", price: 30, category: "Clothes" },
-  { name: "Product 3", price: 40, category: "Electronics" },
-  { name: "Product 4", price: 50, category: "Clothes" },
-  { name: "Product 5", price: 60, category: "Clothes" },
-  { name: "Product 6", price: 70, category: "Electronics" },
-  { name: "Product 7", price: 80, category: "Clothes" },
-  { name: "Product 8", price: 90, category: "Electronics" },
-  ];
+// const products = [
+//   { name: "Product 1", price: 20, category: "Electronics" },
+//   { name: "Product 2", price: 30, category: "Clothes" },
+//   { name: "Product 3", price: 40, category: "Electronics" },
+//   { name: "Product 4", price: 50, category: "Clothes" },
+//   { name: "Product 5", price: 60, category: "Clothes" },
+//   { name: "Product 6", price: 70, category: "Electronics" },
+//   { name: "Product 7", price: 80, category: "Clothes" },
+//   { name: "Product 8", price: 90, category: "Electronics" },
+//   ];
 
-  const sumOfElectronics = products.reduce((acc,item)=> {
+//   const sumOfElectronics = products.reduce((acc,item)=> {
     
-   if(item.category==="Electronics"){
-   return acc + item.price}
-   else {
-    return acc 
-   }
+//    if(item.category==="Electronics"){
+//    return acc + item.price}
+//    else {
+//     return acc 
+//    }
  
-  },0)
-  console.log(sumOfElectronics);
+//   },0)
+//   console.log(sumOfElectronics);
 
   
 
-  const sumOfClothes = products.reduce((acc,item)=> {
+//   const sumOfClothes = products.reduce((acc,item)=> {
     
-    if(item.category==="Clothes"){
-    return acc + item.price}
-    else {
-     return acc 
-    }
+//     if(item.category==="Clothes"){
+//     return acc + item.price}
+//     else {
+//      return acc 
+//     }
   
-   },0)
-console.log(sumOfClothes);
+//    },0)
+// console.log(sumOfClothes);
 
+// ======================================================
+
+// Task : You are given an array of objects representing a collection of employees, each with a name, salary,
+// and department. Your task is to use map, filter, and reduce to calculate the average salary for each
+// department and then return an array of objects containing only the departments that have an average
+// salary above 65000.
+
+const employees = [
+{ name: "John", salary: 50000, department: "IT" },
+{ name: "Jane", salary: 60000, department: "HR" },
+{ name: "Bob", salary: 55000, department: "IT" },
+{ name: "Sophie", salary: 75000, department: "HR" },
+{ name: "Mike", salary: 65000, department: "IT" },
+{ name: "Emily", salary: 80000, department: "HR" },
+{ name: "David", salary: 70000, department: "IT" },
+];
+
+
+
+// // const departmentGroup = department
+// const employeeDepartmentGroup = employees.reduce((acc,group)=>{
+//   let keyWord = group.department
+// if(!acc[keyWord]){
+//   acc[keyWord]=[]
+// }
+//  acc[keyWord].push(group)
+// return acc
+// },{})
+
+// // console.log(employeeDepartmentGroup);
+// console.log(employeeDepartmentGroup["IT"]);
+
+
+/* Use reduce to create an object with department as the key
+and an array of employee objects as the value */
+const employeesByDepartment = employees.reduce((acc, employee) => {
+  const department = employee.department;
+  if (!acc[department]) {
+  acc[department] = [];
+  }
+  acc[department].push(employee);
+  return acc;
+  }, {});
+  // Use map to calculate the average salary for each department
+  const avgSalaryByDepartment = Object.keys(employeesByDepartment).map(department =>
+  {
+  const sum = employeesByDepartment[department].reduce((acc, employee) => acc +
+  employee.salary, 0);
+  return { department: department, average: sum /
+  employeesByDepartment[department].length };
+  });
+  // Use filter to only select departments with an average above a certain threshold
+  const highPaidDepartments = avgSalaryByDepartment.filter(department => department.average > 65000);
+  console.log(highPaidDepartments)
+
+
+  // ===========================================
+
+
+  //!Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
+const input = [
+  {
+    name: "John",
+    age: 13,
+  },
+  {
+    name: "Mark",
+    age: 56,
+  },
+  {
+    name: "Rachel",
+    age: 45,
+  },
+  {
+    name: "Nate",
+    age: 67,
+  },
+  {
+    name: "Jennifer",
+    age: 65,
+  },
+];
+
+//result [13, 67, 54];
+
+// const wantedResult = input.reduce((acc,arr)=>{
+//   let age = arr.age
+//   if(!acc[age]){
+//     acc[age]=[]
+//   }
+//   acc[age].push(age)
+//   return acc
+// },{})
+
+// console.log(wantedResult);
+
+
+// const [{age}] = input
+
+// console.log(age);
+
+// const ageArr =input.map(arr=> arr.age)
+// console.log(ageArr);
+
+// console.log(Math.min(...ageArr));
+// console.log(Math.max(...ageArr));
+const ageOfArr =(arr)=>{
+  const ageArr =arr.map(arr=> arr.age)
+  
+  
+  return [Math.min(...ageArr),Math.max(...ageArr),Math.max(...ageArr) - Math.min(...ageArr)]
+}
+
+console.log(ageOfArr(input));
