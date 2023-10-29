@@ -629,3 +629,29 @@ const ageOfArr =(arr)=>{
 }
 
 console.log(ageOfArr(input));
+
+// ========================================================
+
+// Write a function that takes an array and a target number as input, and returns the indices of two numbers within the array that add up to the target number. If no such numbers exist, the function should return null.
+// For example:
+// Input array: [1, 2, 3, 4, 5]
+// Target number: 9
+// In this case, the function should return [3, 4], because 4 + 5 = 9 and these numbers are at the 3rd and 4th indices in the array.
+
+
+// const myFunc = (arr, number) => {
+//   let result = null;
+
+//   arr.forEach((a, i) => {
+//     arr.forEach((b, j) => {
+//       if (a + b === number && i < j) {
+//         result = [i, j];
+//       }
+//     });
+//   });
+
+//   return result;
+// };
+
+// const userArr = [1, 2, 3, 4, 5];
+// console.log(myFunc(userArr, 9));
