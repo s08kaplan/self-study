@@ -408,6 +408,8 @@ const users = [
 // console.log(nameLengths) // [5, 3, 7]
 
 
+
+
 // const words = ["apple", "banana", "cherry"];
 // const capitalizedWords = words
 // .map(name=>name.toUpperCase())
@@ -655,3 +657,62 @@ console.log(ageOfArr(input));
 
 // const userArr = [1, 2, 3, 4, 5];
 // console.log(myFunc(userArr, 9));
+
+
+
+
+//! if first dice is 1 and second dice is 6, output should be 'one - six'
+
+// For example :
+
+// call this function with dices(10) Yo should display all 10 result.
+
+// And display the result in the following format on the console:
+
+// for Example:
+
+//! 1st dice: 2 2nd dice: 3 output => 'two' - 'three'
+
+//! 1st dice: 6 2nd dice: 4 output => 'four' - 'six' // Always dsiplay the low dice first.
+
+const dice1 = {
+  1 : "one",
+  2 : "two",
+  3 : "three",
+  4: "four",
+  5 : "five",
+  6 : "six"
+}
+
+const dice2 = {
+ 1 : "one",
+ 2 : "two",
+ 3 : "three",
+ 4: "four",
+ 5 : "five",
+ 6 : "six"
+}
+
+
+const dices =(obj1,obj2)=>{
+  let result = ""
+  let random1 = Math.floor(Math.random()*Object.keys(dice1).length)
+  // obj1[random1]
+  let random2 = Math.floor(Math.random()*Object.keys(dice2).length)
+  // obj2[random2]
+  if(random1 === 0){random1++}
+  if(random2 === 0){random2++}
+  if((obj1[random1] < obj2[random2]) && (Number(obj1) + Number(obj2) !== 10)){
+     result = `${obj1[random1]}  ${obj2[random2]}`
+  }
+  else if((obj1[random1] > obj2[random2]) && (Number(obj1) + Number(obj2) !== 10)){
+      result = `${obj2[random2]}   ${obj1[random1]}`
+  }
+  else if(Number(obj1)+Number(obj2)===10){
+      result= "ten"
+  }
+  return result
+}
+
+
+console.log(dices(dice1,dice2));
