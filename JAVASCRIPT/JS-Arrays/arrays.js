@@ -495,3 +495,83 @@ const result4 = numbers
 .reduceRight((x,y)=> (x - y),4)
 
 console.log(result4);
+
+
+
+const sahislar = {
+    sahis1: {
+      name: "Can",
+      name:"mahmud",
+      surname: "Canan",
+      dob: "1990",
+      job: "developer",
+      salary: "140000",
+      drivingLicense: true,
+    },
+    sahis2: {
+      name: "John",
+      surname: "Sweet",
+      dob: "1990",
+      job: "tester",
+      salary: "110000",
+      drivingLicense: false,
+    },
+    sahis3: {
+      name: "Steve",
+      surname: "Job",
+      dob: "2000",
+      job: "developer",
+      salary: "90000",
+      drivingLicense: true,
+    },
+  }
+
+  for (const name in sahislar) {
+    console.log(name);
+}
+
+    console.log("*********************************");
+  for (const name of Object.keys(sahislar)) {
+    console.log(name);
+ }
+
+ console.log("=====================================");
+  for (const name of Object.values(sahislar)) {
+    console.log(name);
+}
+
+console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+  for (const name of Object.values(sahislar.sahis1)) {
+    console.log(name);
+}
+
+console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+for (const name of Object.keys(sahislar.sahis1)) {
+    console.log(name);
+}
+console.log("---------------------------------------");
+  for (const name of Object.entries(sahislar)) {
+    console.log(name);
+ }
+console.log("#######################################");  
+const {sahis2}=sahislar
+console.log(sahis2);
+for (const item in sahis2) {
+    
+    console.log(item);    
+}
+console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+for (const value of Object.keys(sahis2)) {
+    console.log(value);
+}
+
+console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+for (const value of Object.values(sahis2)) {
+    console.log(value);
+}
+
+console.log("'''''''''''''''''''''''''''''''''''''''");
+for (const value of Object.entries(sahis2)) {
+    console.log(value);
+}
