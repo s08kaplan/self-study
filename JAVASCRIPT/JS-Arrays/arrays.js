@@ -575,3 +575,8 @@ console.log("'''''''''''''''''''''''''''''''''''''''");
 for (const value of Object.entries(sahis2)) {
     console.log(value);
 }
+
+console.log("111111111111111111111111111111111");
+
+const {sahis1,sahis3} = sahislar
+console.log({...sahis1,...sahis3});
