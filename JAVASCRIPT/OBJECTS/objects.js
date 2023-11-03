@@ -234,10 +234,6 @@
 
 // // Using the prototype is a fundamental concept in JavaScript's object-oriented programming and is essential when working with constructor functions to create objects efficiently.
 
-
-
-
-
 // const posts = [
 //   {
 //     title: "Post 1",
@@ -263,8 +259,6 @@
 //     return acc
 //  },[])
 //  console.log(lastResult);
- 
-
 
 //  const valuesOfArr = [1,2,1,5,1,4,2,6,2,8]
 //  const myChoice2 = valuesOfArr.reduce((acc,number)=>{
@@ -276,11 +270,8 @@
 
 //  console.log(myChoice2.sort((a,b)=> a-b));
 
-
-
- 
 //  const organization = {
- 
+
 //    name: "Tech Company",
 //    departments: {
 //      hr: {
@@ -293,7 +284,6 @@
 //      }
 //    }
 // }
-
 
 // const {departments}=organization
 // console.log(departments);
@@ -347,59 +337,54 @@
 // console.log(area);
 // console.log(w);
 
-
 // =======================================
-
-
 
 //Iterate through the users array and get all the keys of the object using destructuring
 
-
 const users = [
-{
-  name:'Brook',
-  scores:75,
-  skills:['HTM', 'CSS', 'JS'],
-  age:16
-},
-{
-  name:'Alex',
-  scores:80,
-  skills:['HTM', 'CSS', 'JS'],
-  age:18
-},
-{
-  name:'David',
-  scores:75,
-  skills:['HTM', 'CSS'],
-  age:22
-},
-{
-  name:'John',
-  scores:85,
-  skills:['HTML'],
-  age:25
-},
-{
-  name:'Sara',
-  scores:95,
-  skills:['HTM', 'CSS', 'JS'],
-  age: 26
-},
-{
-  name:'Martha',
-  scores:80,
-  skills:['HTM', 'CSS', 'JS'],
-  age:18
-},
-{
-  name:'Thomas',
-  scores:90,
-  skills:['HTM', 'CSS', 'JS'],
-  age:20
-}
-]
-
+  {
+    name: "Brook",
+    scores: 75,
+    skills: ["HTM", "CSS", "JS"],
+    age: 16,
+  },
+  {
+    name: "Alex",
+    scores: 80,
+    skills: ["HTM", "CSS", "JS"],
+    age: 18,
+  },
+  {
+    name: "David",
+    scores: 75,
+    skills: ["HTM", "CSS"],
+    age: 22,
+  },
+  {
+    name: "John",
+    scores: 85,
+    skills: ["HTML"],
+    age: 25,
+  },
+  {
+    name: "Sara",
+    scores: 95,
+    skills: ["HTM", "CSS", "JS"],
+    age: 26,
+  },
+  {
+    name: "Martha",
+    scores: 80,
+    skills: ["HTM", "CSS", "JS"],
+    age: 18,
+  },
+  {
+    name: "Thomas",
+    scores: 90,
+    skills: ["HTM", "CSS", "JS"],
+    age: 20,
+  },
+];
 
 // const names = ["Alice", "Bob", "Charlie"];
 // //Write your code here
@@ -407,14 +392,10 @@ const users = [
 // .map(name=> name.length )
 // console.log(nameLengths) // [5, 3, 7]
 
-
-
-
 // const words = ["apple", "banana", "cherry"];
 // const capitalizedWords = words
 // .map(name=>name.toUpperCase())
 // console.log(capitalizedWords)
-
 
 // function deepFreeze (o) {
 //   Object.freeze(o);
@@ -433,7 +414,6 @@ const users = [
 //   return o;
 // };
 
-
 // const products = [
 //   { name: "Product 1", price: 20, category: "Electronics" },
 //   { name: "Product 2", price: 30, category: "Clothes" },
@@ -450,7 +430,6 @@ const users = [
 // .map(obj=>obj.price)
 // .reduce((sum,price)=> sum + price)
 
-
 // const electronics = products
 // .filter(product=> (product.category === "Electronics"))
 
@@ -459,12 +438,10 @@ const users = [
 
 // console.log(electronicsAverage)
 
-
 // const mySolution2 = products
 // .filter(product=> product.category === "Clothes")
 // .map(obj=>obj.price)
 // .reduce((sum,price)=> sum + price)
-
 
 // const clothes = products
 // .filter(product=> (product.category === "Clothes"))
@@ -474,13 +451,10 @@ const users = [
 
 // console.log(clothesAverage)
 
-
 // let wantedResultForElectronics = electronicsAverage > 50 && electronicsAverage
 // let wantedResultForClothes = clothesAverage > 50 && clothesAverage
 
 // console.log(wantedResultForClothes,wantedResultForElectronics);
-
-
 
 // const products = [
 //   { name: "Product 1", price: 20, category: "Electronics" },
@@ -494,26 +468,24 @@ const users = [
 //   ];
 
 //   const sumOfElectronics = products.reduce((acc,item)=> {
-    
+
 //    if(item.category==="Electronics"){
 //    return acc + item.price}
 //    else {
-//     return acc 
+//     return acc
 //    }
- 
+
 //   },0)
 //   console.log(sumOfElectronics);
 
-  
-
 //   const sumOfClothes = products.reduce((acc,item)=> {
-    
+
 //     if(item.category==="Clothes"){
 //     return acc + item.price}
 //     else {
-//      return acc 
+//      return acc
 //     }
-  
+
 //    },0)
 // console.log(sumOfClothes);
 
@@ -525,16 +497,14 @@ const users = [
 // salary above 65000.
 
 const employees = [
-{ name: "John", salary: 50000, department: "IT" },
-{ name: "Jane", salary: 60000, department: "HR" },
-{ name: "Bob", salary: 55000, department: "IT" },
-{ name: "Sophie", salary: 75000, department: "HR" },
-{ name: "Mike", salary: 65000, department: "IT" },
-{ name: "Emily", salary: 80000, department: "HR" },
-{ name: "David", salary: 70000, department: "IT" },
+  { name: "John", salary: 50000, department: "IT" },
+  { name: "Jane", salary: 60000, department: "HR" },
+  { name: "Bob", salary: 55000, department: "IT" },
+  { name: "Sophie", salary: 75000, department: "HR" },
+  { name: "Mike", salary: 65000, department: "IT" },
+  { name: "Emily", salary: 80000, department: "HR" },
+  { name: "David", salary: 70000, department: "IT" },
 ];
-
-
 
 // // const departmentGroup = department
 // const employeeDepartmentGroup = employees.reduce((acc,group)=>{
@@ -549,34 +519,38 @@ const employees = [
 // // console.log(employeeDepartmentGroup);
 // console.log(employeeDepartmentGroup["IT"]);
 
-
 /* Use reduce to create an object with department as the key
 and an array of employee objects as the value */
 const employeesByDepartment = employees.reduce((acc, employee) => {
   const department = employee.department;
   if (!acc[department]) {
-  acc[department] = [];
+    acc[department] = [];
   }
   acc[department].push(employee);
   return acc;
-  }, {});
-  // Use map to calculate the average salary for each department
-  const avgSalaryByDepartment = Object.keys(employeesByDepartment).map(department =>
-  {
-  const sum = employeesByDepartment[department].reduce((acc, employee) => acc +
-  employee.salary, 0);
-  return { department: department, average: sum /
-  employeesByDepartment[department].length };
-  });
-  // Use filter to only select departments with an average above a certain threshold
-  const highPaidDepartments = avgSalaryByDepartment.filter(department => department.average > 65000);
-  console.log(highPaidDepartments)
+}, {});
+// Use map to calculate the average salary for each department
+const avgSalaryByDepartment = Object.keys(employeesByDepartment).map(
+  (department) => {
+    const sum = employeesByDepartment[department].reduce(
+      (acc, employee) => acc + employee.salary,
+      0
+    );
+    return {
+      department: department,
+      average: sum / employeesByDepartment[department].length,
+    };
+  }
+);
+// Use filter to only select departments with an average above a certain threshold
+const highPaidDepartments = avgSalaryByDepartment.filter(
+  (department) => department.average > 65000
+);
+console.log(highPaidDepartments);
 
+// ===========================================
 
-  // ===========================================
-
-
-  //!Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
+//!Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
 const input = [
   {
     name: "John",
@@ -613,7 +587,6 @@ const input = [
 
 // console.log(wantedResult);
 
-
 // const [{age}] = input
 
 // console.log(age);
@@ -623,12 +596,15 @@ const input = [
 
 // console.log(Math.min(...ageArr));
 // console.log(Math.max(...ageArr));
-const ageOfArr =(arr)=>{
-  const ageArr =arr.map(arr=> arr.age)
-  
-  
-  return [Math.min(...ageArr),Math.max(...ageArr),Math.max(...ageArr) - Math.min(...ageArr)]
-}
+const ageOfArr = (arr) => {
+  const ageArr = arr.map((arr) => arr.age);
+
+  return [
+    Math.min(...ageArr),
+    Math.max(...ageArr),
+    Math.max(...ageArr) - Math.min(...ageArr),
+  ];
+};
 
 console.log(ageOfArr(input));
 
@@ -639,7 +615,6 @@ console.log(ageOfArr(input));
 // Input array: [1, 2, 3, 4, 5]
 // Target number: 9
 // In this case, the function should return [3, 4], because 4 + 5 = 9 and these numbers are at the 3rd and 4th indices in the array.
-
 
 // const myFunc = (arr, number) => {
 //   let result = null;
@@ -658,9 +633,6 @@ console.log(ageOfArr(input));
 // const userArr = [1, 2, 3, 4, 5];
 // console.log(myFunc(userArr, 9));
 
-
-
-
 //! if first dice is 1 and second dice is 6, output should be 'one - six'
 
 // For example :
@@ -676,43 +648,101 @@ console.log(ageOfArr(input));
 //! 1st dice: 6 2nd dice: 4 output => 'four' - 'six' // Always dsiplay the low dice first.
 
 const dice1 = {
-  1 : "one",
-  2 : "two",
-  3 : "three",
+  1: "one",
+  2: "two",
+  3: "three",
   4: "four",
-  5 : "five",
-  6 : "six"
-}
+  5: "five",
+  6: "six",
+};
 
 const dice2 = {
- 1 : "one",
- 2 : "two",
- 3 : "three",
- 4: "four",
- 5 : "five",
- 6 : "six"
-}
+  1: "one",
+  2: "two",
+  3: "three",
+  4: "four",
+  5: "five",
+  6: "six",
+};
 
-
-const dices =(obj1,obj2)=>{
-  let result = ""
-  let random1 = Math.floor(Math.random()*Object.keys(dice1).length)
+const dices = (obj1, obj2) => {
+  let result = "";
+  let random1 = Math.round(Math.random() * Object.keys(dice1).length);
   // obj1[random1]
-  let random2 = Math.floor(Math.random()*Object.keys(dice2).length)
+  let random2 = Math.round(Math.random() * Object.keys(dice2).length);
   // obj2[random2]
-  if(random1 === 0){random1++}
-  if(random2 === 0){random2++}
-  if((obj1[random1] < obj2[random2]) && (Number(obj1) + Number(obj2) !== 10)){
-     result = `${obj1[random1]}  ${obj2[random2]}`
+  if (random1 === 0) {
+    random1++;
   }
-  else if((obj1[random1] > obj2[random2]) && (Number(obj1) + Number(obj2) !== 10)){
-      result = `${obj2[random2]}   ${obj1[random1]}`
+  if (random2 === 0) {
+    random2++;
   }
-  else if(Number(obj1)+Number(obj2)===10){
-      result= "ten"
+  if (obj1[random1] < obj2[random2] && Number(obj1) + Number(obj2) !== 10) {
+    result = `${obj1[random1]}  ${obj2[random2]}`;
+  } else if (
+    obj1[random1] > obj2[random2] &&
+    Number(obj1) + Number(obj2) !== 10
+  ) {
+    result = `${obj2[random2]}   ${obj1[random1]}`;
+  } else if (Number(obj1) + Number(obj2) === 10) {
+    result = "ten";
   }
-  return result
-}
+  return result;
+};
+
+console.log(dices(dice1, dice2));
 
 
-console.log(dices(dice1,dice2));
+
+
+
+
+
+
+
+const input2 = {
+  1: "John",
+  age1: 13,
+
+  2: "Mark",
+  age2: 56,
+
+  3: "Rachel",
+  age3: 45,
+
+  4: "Nate",
+  age4: 67,
+
+  5: "Jennifer",
+  age5: 65,
+};
+// cons,name2,name3}=input2
+console.log(input2[1]);
+
+
+
+
+const input3 = [
+  {
+    name: "John",
+    age: 13,
+  },
+  {
+    person: "Mark",
+    age1: 56,
+  },
+  {
+    name2: "Rachel",
+    age2: 45,
+  },
+  {
+    name3: "Nate",
+    age3: 67,
+  },
+  {
+    name4: "Jennifer",
+    age4: 65,
+  },
+];
+ const [{name2,age2}]=input3
+ console.log(name2);
