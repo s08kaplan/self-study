@@ -12,7 +12,20 @@ sum += i
 
 console.log(addUpp(10));
 
-// ? Create a function which returns the number of the same values there are in an array.
+// ? Create a function which returns the unique elements of the given array.
 
 const values = [1,2,3,1,2,4,5,6]
+const uniqueValues =(arr)=>{
+    let uniqueElements = []
+for (let i = 0; i < arr.length; i++) {
+    if(uniqueElements.includes(arr[i])){
+        continue;
+    }
+    else {
+        uniqueElements.push(arr[i])
+    }
+}
+return uniqueElements
+}
 
+console.log(uniqueValues(values));
