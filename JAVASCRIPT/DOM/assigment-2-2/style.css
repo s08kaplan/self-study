@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*? =================NAVBAR===================== */
+
+.navbar-collapse {
+  margin-right: 5rem !important;
+  gap: 5rem !important;
+}
+
+.nav-item a {
+  color: blueviolet;
+  transition: all 0.8s;
+}
+
+.nav-item a:hover {
+  transform: scale(1.2);
+  color: coral;
+}
+
+/*? ========================MAIN======================== */
+
+body {
+  background-image: url(./img/berries-2277_640.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  position: relative;
+}
+
+#main-message {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+#random-message {
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+/* button {
+    width: 10rem !important;
+    background-color: white;
+} */
+
+.btn {
+  width: 10rem !important;
+  background-color: coral;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.remember {
+  position: absolute;
+  top: 400px;
+  left: 20px;
+  color: red;
+  text-transform: uppercase;
+  display: none;
+}
+
+
+.pause {
+    border-radius: 2rem;
+    margin-top: 5rem;
+    width: 5rem;
+    height: 3rem;
+    position: absolute;
+    top: 150px;
+    left: 750px;
+}
+
+
+/* main.img-container {
+    height: calc(100vh- 65px); 
+}
+
+.display-img {
+    width: 100%;
+  
+} */
