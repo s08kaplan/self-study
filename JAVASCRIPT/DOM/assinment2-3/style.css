@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*! =================NAVBAR========================== */
+
+nav img{
+    width: 5rem;
+
+}
+
+
+/*! ========================BODY-MAIN=================== */
+
+body {
+    background-image: url(../assigment-2-2/img/background-3390802_1920.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+#random-message {
+    margin-top: 5rem;
+} 
+
+#main-message {
+    margin-top: 5rem;
+}
+
+.btn {
+    margin-bottom: 2.5rem;
+}
+
+.pause {
+    width: 5rem;
+    border-radius: 1.5rem;
+}
+
+button {
+    margin-left: 25rem;
+}
