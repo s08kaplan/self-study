@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+  }
+  
+  .fa-trash-can {
+    cursor: pointer;
+  }
+  
+  .list-container {
+   
+    max-height: 500px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    display: none;
+  }
+  .form-check-input:checked + .form-check-label {
+    text-decoration: line-through;
+  }
+  
+  .form-check-input:checked {
+    background-color: #e6e6e6;
+  }
