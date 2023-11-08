@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+   position: absolute;
+   top: 50%;
+   left: 30%;
+    border: 2;
+    text-align: center;
+    /* border-collapse: collapse; */
+    
+}
+
+th{
+    padding: 2rem;
+}
