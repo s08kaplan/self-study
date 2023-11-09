@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="wallet.css" />
+  </head>
+
+  <title>WALLET</title>
+
+  <body>
+    <div class="container">
+      <div class="title d-flex align-items-center gap-4">
+        <div class="message">
+          <h1>Fakirin Hesap Tablosu</h1>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-credit-card"></i>
+        </div>
+      </div>
+      <!--============== FIRST PART ===============-->
+      <div class="first-part">
+        <div class="expense">
+          <h4 class="text-center">Harcama Formu</h4>
+        </div>
+        <div class="date d-flex flex-row gap-5 justify-content-around">
+          <h4>Tarih</h4>
+          <h4>Harcama Miktari</h4>
+        </div>
+        <div class="head d-flex bg-body-secondary">
+          <div class="input-group m-3 w-75 tarih-harcama">
+            <input type="text" class="form-control head-date" readonly />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              <i class="fa-regular fa-calendar-check"></i>
+            </button>
+          </div>
+
+          <div class="input-group m-3 w-75">
+            <input type="number" class="form-control expense" min="0"/>
+          </div>
+        </div>
+
+        <div class="input-group mb-3 mt-3 d-flex flex-column">
+          <div class="harcama">
+            <h4>Harcama Alanı</h4>
+          </div>
+          <div class="harcama-input">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Kira,Fatura,Kredi Kartı"
+            />
+            <button type="button" class="btn btn-danger mt-2 kaydet">
+              Kaydet
+            </button>
+          </div>
+          <div class="d-flex align-items-center gap-2 mt-3">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Gelirinizi giriniz" min="0"
+            />
+            <button type="button" class="btn btn-success ekle">Ekle</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============SECOND PART ================== -->
+      <div class="second-part">
+        <table class="table table-light table-striped">
+          <tr>
+            <th>Tarih</th>
+            <th>Harcama Alanı</th>
+            <th>Miktar(₺)</th>
+            <th>İşlem</th>
+          </tr>
+        </table>
+      </div>
+      <div class="last-part-text d-flex justify-content-end">
+        <div class="last-part d-flex justify-content-end">
+          <table class="table table-light table-striped gelir-gider text-end">
+            <tr>
+              <td>Geliriniz(₺)</td>
+            </tr>
+            <tr>
+              <td>Gideriniz($)</td>
+            </tr>
+            <tr>
+              <td>Kalan(₺)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="last-part-number d-flex justify-content-end w-25">
+          <table
+            class="table table-light table-striped son-table text-end number-table"
+          >
+            <tr>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="temizle">
+        <button class="btn btn-secondary" type="button" id="button-addon2">
+          Bilgileri Temizle
+        </button>
+      </div>
+    </div>
+    <script src="wallet-fix.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.first-part {
+    height: 50vh;
+}
+
+
+
+.date {
+  display:flex;
+  flex-direction: column;
+}
+
+
+.btn-danger {
+    margin-left: 15rem;
+}
+
+
+table {
+    width: 550px !important;
+    text-align: center;
+}
+
+.son-table {
+    width: 250px !important;
+    margin-right: 10px;
+}
