@@ -7,9 +7,14 @@ const year = date.getFullYear();
 
 day = day < 10 ? "0" + day : day;
 month = month < 10 ? "0" + month : month;
-let fullDate = day + "/" + month + "/" + year;
+// let fullDate = day + "/" + month + "/" + year;
+let fullDate = year + "-" + month + "-" + day
+// headDate.value = fullDate;
+document.querySelector("#date").value = fullDate
+document.querySelector("#date").addEventListener("change",(item)=>{
+  console.log(item.target.value);
+})
 
-headDate.value = fullDate;
 
 // ?================HARCAMA MIKTARI -HARCAMA ALANI=================
 
