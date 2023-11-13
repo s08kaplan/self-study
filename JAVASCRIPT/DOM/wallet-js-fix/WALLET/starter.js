@@ -4,6 +4,16 @@ document.addEventListener("DOMContentLoaded",()=>{
 const kaydet = document.getElementById("kaydet");
 const ekle = document.querySelector("#ekle-btn")
 
+// let miktar = document.getElementById("miktar").value;
+//   let tarih = document.getElementById("tarih").value;
+    
+//   let harcamaAlani = document.getElementById("harcama-alani").value;
+
+  
+//   let message = "";
+//   let textColor = "";
+//   let bgColor = "";
+
 kaydet.addEventListener("click", harcamaFormKaydet);
 
 function harcamaFormKaydet(e) {
@@ -62,7 +72,7 @@ function harcamaFormKaydet(e) {
     //      tarih=""
     //      miktar=""
     //      harcamaAlani=""
-         break;
+        //  break;
   }
 
 
@@ -110,9 +120,13 @@ function clearDefault() {
   document.querySelector("body").style.color = "";
   document.querySelector("body").style.backgroundColor = "";
   document.querySelector("form#harcama-formu h4").innerText = "Harcama Formu";
+
+  let tarih = document.getElementById("tarih").value;
+  let harcamaAlani = document.getElementById("harcama-alani").value;
+
   tarih=""
-         miktar=""
-         harcamaAlani=""
+  miktar=""
+ harcamaAlani=""
 }
 
 
