@@ -185,3 +185,38 @@ const kafamaGore2 = async () => {
 }
 
 kafamaGore2()
+
+
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+const myChoice = new Promise((resolve,reject)=>{
+    fetch("https://jsonplaceholder.org/users")
+    .then(response => {
+        return response.json()
+    })
+    .then(response.json().firstname)
+})
+.catch(err =>{
+    console.log("errrrrrr");
+})
+
+console.log(myChoice);
+
+
+const myChoice1 = new Promise((resolve, reject) => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then(response => response.json())
+        .then(data => resolve(data.map(el=>el.name)))
+        .catch(err => reject(err));
+});
+
+myChoice1
+    .then(result => {
+        console.log(result);
+    })
+    .catch(err => {
+        console.log("Error:", err);
+    });
+
+
+    console.log(myChoice1);
