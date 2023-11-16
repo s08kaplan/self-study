@@ -61,162 +61,223 @@
 // func7(func8);
 
 
-const func1 = (something) => {
-    console.log("hey");
-    something()
-}
+// const func1 = (something) => {
+//     console.log("hey");
+//     something()
+// }
 
-const func2 = () => {
-    console.log("i am here");
-}
+// const func2 = () => {
+//     console.log("i am here");
+// }
 
-func1(func2)
-console.log("***************");
+// func1(func2)
+// console.log("***************");
 
 
-const func3 = (something) => {
-    something()
-    console.log("hey");
-}
+// const func3 = (something) => {
+//     something()
+//     console.log("hey");
+// }
 
-const func4 = () => {
-    console.log("i am here");
-}
+// const func4 = () => {
+//     console.log("i am here");
+// }
 
-func3(func4)
+// func3(func4)
 
-console.log("--------------------");
+// console.log("--------------------");
 
-const func5 = (something) => {
-    setTimeout(()=>{
-         something()
-    console.log("hey"); 
-    },2000)
+// const func5 = (something) => {
+//     setTimeout(()=>{
+//          something()
+//     console.log("hey"); 
+//     },2000)
    
   
-}
+// }
 
-const func6 = () => {
-    console.log("i am here");
-}
+// const func6 = () => {
+//     console.log("i am here");
+// }
 
-func5(func6)
+// func5(func6)
 
-console.log("=======================");
+// console.log("=======================");
 
-const operation = (x,y,op) => {
-    return op(x,y)
-}
+// const operation = (x,y,op) => {
+//     return op(x,y)
+// }
 
-const add =(a,b) =>{
-    return a + b
-}
+// const add =(a,b) =>{
+//     return a + b
+// }
 
-const subtract = (w,t) => {
-return w - t
-}
+// const subtract = (w,t) => {
+// return w - t
+// }
 
-const multiply = (y,z) => {
-    return y * z
-}
+// const multiply = (y,z) => {
+//     return y * z
+// }
 
- console.log(operation(2,3,add));
+//  console.log(operation(2,3,add));
 
- console.log(operation(5,8,multiply));
+//  console.log(operation(5,8,multiply));
 
-setTimeout(()=>{
-    console.log( multiply(4,8));
-}
+// setTimeout(()=>{
+//     console.log( multiply(4,8));
+// }
   
-,3000);
+// ,3000);
 
- console.log(operation(5,2,subtract));
+//  console.log(operation(5,2,subtract));
 
 
-//!  =============================================
+// //!  =============================================
 
-const toplam = (a,b) => {
-    return a + b
-}
+// const toplam = (a,b) => {
+//     return a + b
+// }
 
-const result = toplam(2,3);
+// const result = toplam(2,3);
 
-const kafamaGore = new Promise((resolve,reject)=>{
-    if(result === 5){
-        resolve()
-    }else {
-        reject("kusura bakma kardes sonuc 5 degil")
-    }
-})
+// const kafamaGore = new Promise((resolve,reject)=>{
+//     if(result === 5){
+//         resolve()
+//     }else {
+//         reject("kusura bakma kardes sonuc 5 degil")
+//     }
+// })
 
-kafamaGore
-.then(()=>{
-    console.log(`demek ki dogru kisma girdi o zaman  2 + 3 - 5 * 8 islemini de yap bi zahmet ${2+3-5*8} `);
-})
+// kafamaGore
+// .then(()=>{
+//     console.log(`demek ki dogru kisma girdi o zaman  2 + 3 - 5 * 8 islemini de yap bi zahmet ${2+3-5*8} `);
+// })
 
-.catch((err)=> {
-    console.log("heey hata olustu");
-})
+// .catch((err)=> {
+//     console.log("heey hata olustu");
+// })
 
-//! ***************************************
+// //! ***************************************
 
-const carpim = (k,l) => {
-    return k * l
-}
+// const carpim = (k,l) => {
+//     return k * l
+// }
 
-const result2 = carpim(5,4)
+// const result2 = carpim(5,4)
 
-const kafamaGore2 = async () => {
+// const kafamaGore2 = async () => {
+//     try {
+//         const sonuc = await Promise.resolve(result2 === 10)
+//         console.log(sonuc,`ifade true ya da false oldugu icin degil 
+//         dogru ya da yanlıs bir cevap geldigi icin
+//          buradaki mesaji okuyorsunuz 
+//          tabi console.log'da :))))
+//          ayrica await zaten beklemek demekti
+//           yani gelecek bir cevap bekleniyordu o da geldi 
+//          sayet cevap gelmeseydi o zaman hata olusurdu 
+//          ve catch kismina girerdi 
+//          bu arada konsolda bu kadar uzun yazi gorunce
+//           lutfen dilimize hakim olalim 😂`);
+//     } catch (err) {
+//         console.log("hata oldu hayret neden acaba");
+//     }
+// }
+
+// kafamaGore2()
+
+
+// console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+// const myChoice = new Promise((resolve,reject)=>{
+//     fetch("https://jsonplaceholder.org/users")
+//     .then(response => {
+//         return response.json()
+//     })
+//     .then(response.json().firstname)
+// })
+// .catch(err =>{
+//     console.log("errrrrrr");
+// })
+
+// console.log(myChoice);
+
+
+// const myChoice1 = new Promise((resolve, reject) => {
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//         .then(response => response.json())
+//         .then(data => resolve(data.map(el=>el.name)))
+//         .catch(err => reject(err));
+// });
+
+// myChoice1
+//     .then(result => {
+//         console.log(result);
+//     })
+//     .catch(err => {
+//         console.log("Error:", err);
+//     });
+
+
+//     console.log(myChoice1);
+
+    console.log("##########################################");
+
+//     const myAsyncFunc = async ()=>{
+//         try {
+//           const res = await fetch("https://jsonplaceholder.typicode.com/users")
+//           if(!res.ok){
+//             throw new Error(`Hatasız kul olmaz : ${res.status}`)
+//           }
+//        const data = await res.json() 
+//        use(data)   
+//         } catch (error) {
+//             document.write=`${error}`
+           
+//         }
+      
+//     }
+
+//     const use =(data)=>{
+//         Object.values(data)
+//     }
+
+// console.log(myAsyncFunc());
+
+console.log("====================================");
+
+
+const getNews = async () => {
+    const API_KEY = "1a1a999e0d7240a6bd2dead87bcca78e"
+    const BASE_URL = "https://newsapi.org/v2/"
+    const queryString = "top-headlines?country=us&category=sport&"
+  
+    // const res = await fetch(`https://newsapi.org/v2/top-headlines?country=tr&category=sport&apiKey=1a1a999e0d7240a6bd2dead87bcca78e`)
+  
     try {
-        const sonuc = await Promise.resolve(result2 === 10)
-        console.log(sonuc,`ifade true ya da false oldugu icin degil 
-        dogru ya da yanlıs bir cevap geldigi icin
-         buradaki mesaji okuyorsunuz 
-         tabi console.log'da :))))
-         ayrica await zaten beklemek demekti
-          yani gelecek bir cevap bekleniyordu o da geldi 
-         sayet cevap gelmeseydi o zaman hata olusurdu 
-         ve catch kismina girerdi 
-         bu arada konsolda bu kadar uzun yazi gorunce
-          lutfen dilimize hakim olalim 😂`);
-    } catch (err) {
-        console.log("hata oldu hayret neden acaba");
+      const res = await fetch(`${BASE_URL}${queryString}apiKey=${API_KEY}`)
+      //? Error handling
+      if (!res.ok) {
+        throw new Error(`Something went wrong:${res.status}`)
+      }
+      const data = await res.json()
+      renderNews(data.articles)
+    } catch (error) {
+      
+      document.write = `
+          <h2>${error}</h2>
+          <img src="./img/404.png" alt="" />
+      `
     }
-}
-
-kafamaGore2()
-
-
-console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-
-const myChoice = new Promise((resolve,reject)=>{
-    fetch("https://jsonplaceholder.org/users")
-    .then(response => {
-        return response.json()
+  }
+  const renderNews = (news) => {
+    const newsDiv = document.getElementById("news-div")
+  
+    news.forEach((item) => {
+     document.write(Object.keys(item)) 
     })
-    .then(response.json().firstname)
-})
-.catch(err =>{
-    console.log("errrrrrr");
-})
-
-console.log(myChoice);
-
-
-const myChoice1 = new Promise((resolve, reject) => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-        .then(response => response.json())
-        .then(data => resolve(data.map(el=>el.name)))
-        .catch(err => reject(err));
-});
-
-myChoice1
-    .then(result => {
-        console.log(result);
-    })
-    .catch(err => {
-        console.log("Error:", err);
-    });
-
-
-    console.log(myChoice1);
+  }
+  
+  window.addEventListener("load", () => {
+    getNews()
+  })
