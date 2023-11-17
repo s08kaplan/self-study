@@ -62,13 +62,29 @@ try {
 
   ekranaBas(user)
   
-} catch (err) {
-  console.log(err);
+}catch (err) {
+    document.body.innerText = err
+    document.body.style.textAlign="center"
+    document.body.style.color = "white"
+    document.body.style.backgroundColor = "red"
+  
+    const intervalId = setInterval(() => {
+      document.body.style.backgroundColor =
+        document.body.style.backgroundColor === "red" ? "white" : "red";
+    }, 100);
+  
+   
+    setTimeout(() => {
+      clearInterval(intervalId);
+      document.body.style.backgroundColor = "red";
+    }, 3000);
+  }
+    
   
 }
   
 
-}
+
 
 getUser()
   
