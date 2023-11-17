@@ -71,6 +71,10 @@ try {
     const intervalId = setInterval(() => {
       document.body.style.backgroundColor =
         document.body.style.backgroundColor === "red" ? "white" : "red";
+        const urlErr = 'url("https://cdn.pixabay.com/photo/2014/09/19/16/09/smiley-452694_1280.jpg")'
+        document.body.style.backgroundImage = 
+        document.body.style.backgroundImage === urlErr?(document.body.style.backgroundImage.display = "none"):document.body.style.backgroundImage = urlErr;
+        document.body.style.backgroundSize = 'cover';
     }, 100);
   
    
